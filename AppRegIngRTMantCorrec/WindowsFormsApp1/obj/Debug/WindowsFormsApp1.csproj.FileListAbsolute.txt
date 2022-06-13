@@ -8,3 +8,11 @@ C:\Users\usuario.000\Documents\Apuntes Sistemas\Diseño de Sistemas\AppTPIRegIng
 C:\Users\usuario.000\Documents\Apuntes Sistemas\Diseño de Sistemas\AppTPIRegIngRTMantCorrec\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\usuario.000\Documents\Apuntes Sistemas\Diseño de Sistemas\AppTPIRegIngRTMantCorrec\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\usuario.000\Documents\Apuntes Sistemas\Diseño de Sistemas\AppTPIRegIngRTMantCorrec\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PantIngMantCorrec.resources
+C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacion\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacion\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacion\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PantIngMantCorrec.resources
+C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacion\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacion\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacion\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacion\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacion\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
