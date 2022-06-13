@@ -46,6 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\CambioEstadoRT.cs" />
+    <Compile Include="Entidades\CambioEstadoTurno.cs" />
+    <Compile Include="Entidades\Caracteristica.cs" />
+    <Compile Include="Entidades\CaracteristicaRecurso.cs" />
+    <Compile Include="Entidades\ErrorViewModel.cs" />
+    <Compile Include="Entidades\Estado.cs" />
+    <Compile Include="Entidades\Mantenimiento.cs" />
+    <Compile Include="Entidades\Marca.cs" />
+    <Compile Include="Entidades\Modelo.cs" />
+    <Compile Include="Entidades\PersonalCientifico.cs" />
+    <Compile Include="Entidades\RecursoTecnologico.cs" />
+    <Compile Include="Entidades\TipoRT.cs" />
+    <Compile Include="Entidades\Turno.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="PantIngMantCorrec.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,7 +95,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Boundary\" />
-    <Folder Include="Entidades\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,5 +11,12 @@ namespace AplicacionPPAI.Models
         DateTime fechaInicio { get; set; }
         DateTime fechaInicioPrevista { get; set; }
         string motivoMantenimiento { get; set; }
+        public Mantenimiento(DateTime fechaFin, DateTime fechaInicio, DateTime fechaInicioPrevista, string motivoMantenimiento)
+        {
+            this.fechaFin = fechaFin;
+            this.fechaInicio = fechaInicio;
+            this.fechaInicioPrevista = fechaInicioPrevista;
+            this.motivoMantenimiento = motivoMantenimiento;
+        }
     }
 }
