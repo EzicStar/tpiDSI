@@ -8,8 +8,8 @@ namespace WindowsFormsApp1.Entidades
 {
     class Marca
     {
-        string nombre;
-        Modelo[] modelos;
+        string nombre { get; set; }
+        Modelo[] modelos { get; set; }
 
         public Marca(string nombre, Modelo[] modelos)
         {

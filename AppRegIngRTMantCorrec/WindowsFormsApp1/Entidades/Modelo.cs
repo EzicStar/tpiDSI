@@ -8,7 +8,7 @@ namespace WindowsFormsApp1.Entidades
 {
     public class Modelo
     {
-        private string nombre;
+        string nombre { get; set; }
 
         public Modelo(string nombre)
         {
