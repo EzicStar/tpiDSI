@@ -16,10 +16,10 @@ namespace AplicacionPPAI.Models
          string fraccionHorarioTurno { get; set; }
          TipoRT tipoRT { get; set; }
          Modelo modelo { get; set; }
-         Mantenimiento[] mantenimientos { get; set; }
-         CambioEstadoRT[] cambioEstadoRT { get; set; }
-         Turno[] turnos { get; set; }
-         public RecursoTecnologico(int nroRT, DateTime fechaAlta, string imagenes, int perioricidadMantPrev, int duracionMantPrev, string fraccionHorarioTurno, TipoRT tipoRT, Modelo modelo, Mantenimiento[] mantenimientos, CambioEstadoRT[] cambioEstadoRT, Turno[] turnos)
+         List<Mantenimiento> mantenimientos { get; set; }
+         List<CambioEstadoRT> cambioEstadoRT { get; set; }
+         List<Turno> turnos { get; set; }
+         public RecursoTecnologico(int nroRT, DateTime fechaAlta, string imagenes, int perioricidadMantPrev, int duracionMantPrev, string fraccionHorarioTurno, TipoRT tipoRT, Modelo modelo, List<Mantenimiento> mantenimientos, List<CambioEstadoRT> cambioEstadoRT, List<Turno> turnos)
         {
             this.nroRT = nroRT;
             this.fechaAlta = fechaAlta;
@@ -32,6 +32,29 @@ namespace AplicacionPPAI.Models
             this.mantenimientos = mantenimientos;
             this.cambioEstadoRT = cambioEstadoRT;
             this.turnos = turnos;
+        }
+        public bool esDisponible()
+        {
+            foreach (CambioEstadoRT cambioestado in cambioEstadoRT)
+            {
+                if (cambioestado.EsVigente())
+                {
+                    return cambioestado.EsDisponible();
+                }
+            }
+            return false;
+        } 
+        public void EnMantenimientoCorrectivo(Estado estado, DateTime fechaInicio, DateTime fechaHasta, string motivo)
+        {
+            foreach(Turno turno in turnos)
+            {
+                if (turno.EsEnPeriodo(fechaHasta))
+                {
+                    turno.CancelarPorMantenimientoCorrectivo(estado);
+                }
+            }
+            var mantenimientoNew = new Mantenimiento(fechaInicio, fechaHasta, motivo);
+            mantenimientos.Add(mantenimientoNew);
         }
     }
 }

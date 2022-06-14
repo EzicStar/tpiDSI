@@ -26,5 +26,6 @@ namespace AplicacionPPAI.Models
             this.telefono = telefono;
             this.usuario = usuario;
         }
+        public bool TengoUsuarioHabilitado() => usuario.EsHabilitado();
     }
 }
