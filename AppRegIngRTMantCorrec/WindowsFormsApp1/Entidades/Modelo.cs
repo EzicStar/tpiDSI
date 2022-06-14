@@ -6,24 +6,18 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1.Entidades
 {
-    public class Modelo
+    public class Modelo 
     {
         string nombre { get; set; }
 
-        public Modelo(string nombre)
+        public Modelo()
         {
             this.nombre = nombre;
         }
-
-        public string MostrarModelo()
+        public (string, string) MostrarModeloYMarca(Marca marca)
         {
-            return nombre;
-        }
-
-        public string MostrarMisModelos()
-        {
-            //TODO: hacer MostrarMisModelos
-            return null;
+            string nombreMarca = marca.MostrarMarca();
+            return (this.nombre, nombreMarca);
         }
     }
 }

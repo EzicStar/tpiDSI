@@ -6,15 +6,19 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1.Entidades
 {
-    class Marca
+    public class Marca
     {
         string nombre { get; set; }
-        Modelo[] modelos { get; set; }
+        List<Modelo> modelos { get; set; }
 
-        public Marca(string nombre, Modelo[] modelos)
+        public Marca(string nombre, List<Modelo> modelos)
         {
             this.nombre = nombre;
             this.modelos = modelos;
+        }
+        public string MostrarMarca()
+        {
+            return this.nombre;
         }
     }
 }

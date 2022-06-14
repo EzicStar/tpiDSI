@@ -16,5 +16,9 @@ namespace AplicacionPPAI.Models
             this.fechaHoraHasta = fechaHoraHasta;
             this.estado = estado;
         }
+        public void Finalizar()
+        {
+            this.estado.Finalizar();
+        }
     }
 }

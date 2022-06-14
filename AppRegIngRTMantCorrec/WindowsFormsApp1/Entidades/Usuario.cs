@@ -16,5 +16,16 @@ namespace AplicacionPPAI.Models
             this.clave = clave;
             this.habilitado = habilitado;
         }
+        public bool EsHabilitado()
+        {
+            if (this.habilitado)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
