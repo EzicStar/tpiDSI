@@ -27,5 +27,9 @@ namespace AplicacionPPAI.Models
                 return false;
             }
         }
+        public PersonalCientifico GetPersonaCientifico()
+        {
+            return 
+        }
     }
 }

@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\ControladorIngresoMantCorrectivo.cs" />
     <Compile Include="Entidades\AsignacionCientificoDelCI.cs" />
     <Compile Include="Entidades\AsignacionResponsableTecnicoRT.cs" />
     <Compile Include="Entidades\CambioEstadoRT.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="Entidades\Modelo.cs" />
     <Compile Include="Entidades\PersonalCientifico.cs" />
     <Compile Include="Entidades\RecursoTecnologico.cs" />
+    <Compile Include="Entidades\Sesion.cs" />
     <Compile Include="Entidades\TipoRT.cs" />
     <Compile Include="Entidades\Turno.cs" />
     <Compile Include="Entidades\Usuario.cs" />
