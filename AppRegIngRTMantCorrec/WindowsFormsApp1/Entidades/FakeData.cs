@@ -113,7 +113,7 @@ namespace AplicacionPPAI.Models
         static List<CambioEstadoTurno> cambioEstadoTurno1 = new List<CambioEstadoTurno> { cambioEstadoT1, cambioEstadoT2 };
         static List<CambioEstadoTurno> cambioEstadoTurno2 = new List<CambioEstadoTurno> { cambioEstadoT2, cambioEstadoT3, cambioEstadoT4 };
         static List<CambioEstadoTurno> cambioEstadoTurno3 = new List<CambioEstadoTurno> { cambioEstadoT1, cambioEstadoT6, cambioEstadoT7 };
-        //TURNOS
+        //TURNOS  todo: añadir datos con fecha posible!!!! gracias
         public static Turno Turno1 { get; set; } = new Turno(12, new DateTime(), 3, new DateTime(), new DateTime(), cambioEstadoTurno1, AsignacionC1);
         public static Turno Turno2 { get; set; } = new Turno(22, new DateTime(), 4, new DateTime(), new DateTime(), cambioEstadoTurno2, AsignacionC1);
         public static Turno Turno3 { get; set; } = new Turno(4, new DateTime(), 3, new DateTime(), new DateTime(), cambioEstadoTurno1, AsignacionC3);
