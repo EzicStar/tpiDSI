@@ -13,7 +13,8 @@ namespace AplicacionPPAI.Models
         private DateTime fechaHoraInicio;
         private DateTime fechaHoraFin;
         private List<CambioEstadoTurno> cambioEstadoTurno;
-        public Turno(int idTurno, DateTime fechaGeneracion, int diaSemana, DateTime fechaHoraInicio, DateTime fechaHoraFin, List<CambioEstadoTurno> cambioEstadoTurno)
+        private AsignacionCientificoDelCI asigCientifico;
+        public Turno(int idTurno, DateTime fechaGeneracion, int diaSemana, DateTime fechaHoraInicio, DateTime fechaHoraFin, List<CambioEstadoTurno> cambioEstadoTurno, AsignacionCientificoDelCI asigCientifico)
         {
             this.idTurno = idTurno;
             this.fechaGeneracion = fechaGeneracion;
@@ -21,6 +22,7 @@ namespace AplicacionPPAI.Models
             this.fechaHoraInicio = fechaHoraInicio;
             this.fechaHoraFin = fechaHoraFin;
             this.cambioEstadoTurno = cambioEstadoTurno;
+            this.asigCientifico = asigCientifico;
         }
         public void CancelarPorMantenimientoCorrectivo(Estado estado)
         {

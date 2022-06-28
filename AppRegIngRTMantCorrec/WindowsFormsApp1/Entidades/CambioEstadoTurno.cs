@@ -8,9 +8,9 @@ namespace AplicacionPPAI.Models
     public class CambioEstadoTurno
     {
         private DateTime fechaHoraDesde;
-        private DateTime fechaHoraHasta;
+        private DateTime? fechaHoraHasta;
         private Estado estado;
-        public CambioEstadoTurno(DateTime fechaHoraDesde, DateTime fechaHoraHasta, Estado estado)
+        public CambioEstadoTurno(DateTime fechaHoraDesde, DateTime? fechaHoraHasta, Estado estado)
         {
             this.fechaHoraDesde = fechaHoraDesde;
             this.fechaHoraHasta = fechaHoraHasta;

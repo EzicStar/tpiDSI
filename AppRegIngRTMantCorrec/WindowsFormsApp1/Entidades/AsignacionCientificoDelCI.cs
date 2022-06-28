@@ -10,11 +10,11 @@ namespace AplicacionPPAI.Models
     public class AsignacionCientificoDelCI
     {
         private DateTime fechaHoraDesde;
-        private DateTime fechaHoraHasta;
+        private DateTime? fechaHoraHasta;
         private PersonalCientifico personalCientifico;
         private List<Turno> turnos;
 
-        public AsignacionCientificoDelCI(DateTime fechaHoraDesde, DateTime fechaHoraHasta, PersonalCientifico personalCientifico, List<Turno> turnos)
+        public AsignacionCientificoDelCI(DateTime fechaHoraDesde, DateTime? fechaHoraHasta, PersonalCientifico personalCientifico, List<Turno> turnos)
         {
             this.fechaHoraDesde = fechaHoraDesde;
             this.fechaHoraHasta = fechaHoraHasta;

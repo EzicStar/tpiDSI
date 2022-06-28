@@ -102,6 +102,8 @@ namespace AplicacionPPAI.Models
 
         public void MostrarRTASeleccionar(List<string[]> infoRts)
         {
+            dgw_RTDisponibles.Columns.Clear();
+            dgw_RTDisponibles.Rows.Clear();
             dgw_RTDisponibles.DataSource = null;
             dgw_RTDisponibles.Columns.Add("tipoRT", "Tipo RT");
             dgw_RTDisponibles.Columns.Add("numeroRT", "N° RT");
@@ -110,7 +112,7 @@ namespace AplicacionPPAI.Models
 
             for (int fila = 0; fila < infoRts.Count; fila++)
             {
-                dgw_RTDisponibles.Rows.Add();
+                dgw_RTDisponibles.Rows.Add(infoRts[fila]);
             }
             
         }

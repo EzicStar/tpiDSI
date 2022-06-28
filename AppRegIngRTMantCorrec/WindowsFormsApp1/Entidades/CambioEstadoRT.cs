@@ -11,7 +11,7 @@ namespace AplicacionPPAI.Models
         private DateTime? fechaHoraHasta;
         private Estado estado;
 
-        public CambioEstadoRT(DateTime fechaHoraDesde, DateTime fechaHoraHasta, Estado estado)
+        public CambioEstadoRT(DateTime fechaHoraDesde, DateTime? fechaHoraHasta, Estado estado)
         {
             this.fechaHoraDesde = fechaHoraDesde;
             this.fechaHoraHasta = fechaHoraHasta;
@@ -36,8 +36,14 @@ namespace AplicacionPPAI.Models
         }
 
         // verifica si el estado asignado a cambioEstado es disponible
-        public bool EsDisponible() => estado.EsDisponible();
-
+        public bool EsDisponible()
+        {
+            if (estado.EsAmbitoRT() && estado.EsDisponible())
+            {
+                return true;
+            }
+            return false;
+        }
         public void Finalizar(Estado estado)
         {
             this.fechaHoraHasta = DateTime.Now;

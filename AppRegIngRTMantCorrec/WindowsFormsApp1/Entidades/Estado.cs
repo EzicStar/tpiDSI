@@ -65,7 +65,7 @@ namespace AplicacionPPAI.Models
         }
         public bool EsAmbitoRT()
         {
-            if (this.ambito == "RecursoTecnologico")
+            if (this.ambito == "RT")
             {
                 return true;
             }
