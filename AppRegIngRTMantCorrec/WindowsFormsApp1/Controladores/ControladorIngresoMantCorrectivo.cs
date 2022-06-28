@@ -28,7 +28,7 @@ namespace AplicacionPPAI.Controladores
 
             for (int i = 0; i < 2 ; i++)
             {
-                if ()
+   Ignorando             if ()
                 {
 
                 }
