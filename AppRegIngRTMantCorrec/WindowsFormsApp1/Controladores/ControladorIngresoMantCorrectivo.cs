@@ -19,5 +19,22 @@ namespace AplicacionPPAI.Controladores
         {
             return FakeData.SesionActual.GetPersonalCientif();
         }
+
+        //loop buscar Asignacion Responsable Tecnico RT que sea del cientifico logueado y que sea vigente
+        public AsignacionResponsableTecnicoRT esDeUsuarioLogueadoYVigente()
+        {
+            //int count = AsignacionResponsableTecnicoRT.
+            int length = FakeData.ListaAsignaciones.Count;
+
+            for (int i = 0; i < 2 ; i++)
+            {
+                if ()
+                {
+
+                }
+            }
+                
+        }
+
     }
 }
