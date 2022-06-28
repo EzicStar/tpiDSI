@@ -36,9 +36,10 @@ namespace AplicacionPPAI.Models
             var cambioTurnoNew = new CambioEstadoTurno(fechaActual, null, estado);
             cambioEstadoTurno.Add(cambioTurnoNew);
         }
-        public bool EsEnPeriodo(DateTime fechaHasta)
+        public bool EsEnPeriodo(DateTime fechaHasta) //acassaa
         {
-            if (fechaHasta > this.fechaHoraInicio)
+            if (this.fechaHoraInicio.Year > 2018)
+            //if (DateTime.Compare(this.fechaHoraInicio, fechaHasta) > 0)//(fechaHasta > this.fechaHoraInicio)
             {
                 return true;
             }

@@ -89,21 +89,21 @@ namespace AplicacionPPAI.Models
         public static CambioEstadoRT CambioEstadoRT4 { get; set; } = new CambioEstadoRT(new DateTime(2022, 6, 27), new DateTime(2022, 6, 27), EnMantCorrectivoRT);
         public static CambioEstadoRT CambioEstadoRT5 { get; set; } = new CambioEstadoRT(new DateTime(2022, 6, 29), new DateTime(2022, 6, 27), EnMantPreventivoRT);
         //CAMBIO ESTADO TURNO
-        public static CambioEstadoTurno cambioEstadoT1 { get; set; } = new CambioEstadoTurno(new DateTime(2022, 6, 29),
-            new DateTime(2022, 6, 27), DisponibleTurno);
+        public static CambioEstadoTurno cambioEstadoT1 { get; set; } = new CambioEstadoTurno(new DateTime(2022, 6, 29), null/*
+            new DateTime(2022, 6, 27)*/, DisponibleTurno);
         public static CambioEstadoTurno cambioEstadoT2 { get; set; } = new CambioEstadoTurno(new DateTime(2022, 6, 29), null,
             ReservadoTurno);
-        public static CambioEstadoTurno cambioEstadoT3 { get; set; } = new CambioEstadoTurno(new DateTime(2022, 6, 29), new DateTime(2022, 6, 27),
+        public static CambioEstadoTurno cambioEstadoT3 { get; set; } = new CambioEstadoTurno(new DateTime(2022, 6, 29), null /*new DateTime(2022, 6, 27)*/,
             GeneradoTurno);
-        public static CambioEstadoTurno cambioEstadoT4 { get; set; } = new CambioEstadoTurno(new DateTime(2022, 6, 29), new DateTime(2022, 6, 27),
+        public static CambioEstadoTurno cambioEstadoT4 { get; set; } = new CambioEstadoTurno(new DateTime(2022, 6, 29), null /*new DateTime(2022, 6, 27)*/,
             CanceladoTurno);
-        public static CambioEstadoTurno cambioEstadoT5 { get; set; } = new CambioEstadoTurno(new DateTime(2022, 6, 29), new DateTime(),
+        public static CambioEstadoTurno cambioEstadoT5 { get; set; } = new CambioEstadoTurno(new DateTime(2022, 6, 29), null /*new DateTime()*/,
           EnAnalisisTurno);
-        public static CambioEstadoTurno cambioEstadoT6 { get; set; } = new CambioEstadoTurno(new DateTime(2022, 6, 29), new DateTime(),
+        public static CambioEstadoTurno cambioEstadoT6 { get; set; } = new CambioEstadoTurno(new DateTime(2022, 6, 29), null /*new DateTime()*/,
         FinSinUsoTurno);
-        public static CambioEstadoTurno cambioEstadoT7 { get; set; } = new CambioEstadoTurno(new DateTime(2022, 6, 29), new DateTime(),
+        public static CambioEstadoTurno cambioEstadoT7 { get; set; } = new CambioEstadoTurno(new DateTime(2022, 6, 29), null /*new DateTime()*/,
         AnuladoTurno);
-        public static CambioEstadoTurno cambioEstadoT8 { get; set; } = new CambioEstadoTurno(new DateTime(2022, 6, 29), new DateTime(),
+        public static CambioEstadoTurno cambioEstadoT8 { get; set; } = new CambioEstadoTurno(new DateTime(2022, 6, 29), null /*new DateTime()*/,
         FinalizadoTurno);
         public static CambioEstadoTurno cambioEstadoT9 { get; set; } = new CambioEstadoTurno(new DateTime(2022, 6, 29), null,
         EnAnalisisTurno);
@@ -116,8 +116,8 @@ namespace AplicacionPPAI.Models
 
         //CAMBIO ESTADO TURNO
         static List<CambioEstadoTurno> cambioEstadoTurno1 = new List<CambioEstadoTurno> { cambioEstadoT1, cambioEstadoT2 };
-        static List<CambioEstadoTurno> cambioEstadoTurno2 = new List<CambioEstadoTurno> { cambioEstadoT9, cambioEstadoT3, cambioEstadoT4 };
-        static List<CambioEstadoTurno> cambioEstadoTurno3 = new List<CambioEstadoTurno> { cambioEstadoT1, cambioEstadoT6, cambioEstadoT7 };
+        static List<CambioEstadoTurno> cambioEstadoTurno2 = new List<CambioEstadoTurno> { cambioEstadoT9, cambioEstadoT2, cambioEstadoT3, cambioEstadoT4 };
+        static List<CambioEstadoTurno> cambioEstadoTurno3 = new List<CambioEstadoTurno> { cambioEstadoT1, cambioEstadoT2, cambioEstadoT6, cambioEstadoT7 };
         //TURNOS  todo: añadir datos con fecha posible!!!! gracias
         public static Turno Turno1 { get; set; } = new Turno(12, new DateTime(2022, 6, 29), 3, new DateTime(2022, 6, 7), new DateTime(2022, 6, 29), cambioEstadoTurno1, AsignacionC2);
         public static Turno Turno2 { get; set; } = new Turno(22, new DateTime(2022, 6, 29), 4, new DateTime(2022, 6, 7), new DateTime(2022, 6, 29), cambioEstadoTurno2, AsignacionC3);

@@ -63,7 +63,7 @@ namespace AplicacionPPAI.Models
             {
                 string[] infoTurno = turno.MostrarTurno();
                 infoTurnos.Add(infoTurno);
-                mailsCientificos.Add(infoTurno[6]);
+                //mailsCientificos.Add(infoTurno[6]);
             }
 
             interfaz.MostrarTurnosResAfect(infoTurnos); // tmb solicita confirmacion y tipo de notificacion

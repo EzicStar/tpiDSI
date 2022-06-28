@@ -431,6 +431,7 @@
             this.dtp_fechaFinPrevista.Name = "dtp_fechaFinPrevista";
             this.dtp_fechaFinPrevista.Size = new System.Drawing.Size(156, 20);
             this.dtp_fechaFinPrevista.TabIndex = 6;
+            this.dtp_fechaFinPrevista.ValueChanged += new System.EventHandler(this.dtp_fechaFinPrevista_ValueChanged);
             // 
             // lbl_tipoRt
             // 
@@ -458,8 +459,8 @@
             this.ClientSize = new System.Drawing.Size(789, 552);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelMenu);
-            this.Controls.Add(this.groupBoxRTShow);
             this.Controls.Add(this.groupBoxRTCargaMotivo);
+            this.Controls.Add(this.groupBoxRTShow);
             this.MinimumSize = new System.Drawing.Size(805, 591);
             this.Name = "PantIngMantCorrec";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

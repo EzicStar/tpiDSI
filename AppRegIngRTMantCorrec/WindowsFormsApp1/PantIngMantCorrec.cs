@@ -150,5 +150,10 @@ namespace AplicacionPPAI.Models
             }
 
         }
+
+        private void dtp_fechaFinPrevista_ValueChanged(object sender, EventArgs e)
+        {
+            controlador.RazonYFechaFinPrevistaIngresada(txt_RazonIngreso.Text, dtp_fechaFinPrevista.Value.ToString());
+        }
     }
 }
