@@ -74,5 +74,27 @@ namespace AplicacionPPAI.Models
             // mostrar modelo y marca retorna un array, por lo que usamos indices para obtener cada uno
             return datos;
         }
+
+        public bool EsMiNum(int num)
+        {
+            if (num == nroRT)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public List<Turno> MostrarTurnosReservadosPorMC(DateTime fechaFinPrevista)
+        {
+            List<Turno> ReservadosOPendReserv = new List<Turno>();
+            foreach (Turno turno in turnos)
+            {
+                if (turno.EsEnPeriodo(fechaFinPrevista) && turno.EsReservadoOPendienteDeReserva())
+                {
+                    ReservadosOPendReserv.Add(turno);
+                }
+            }
+            return ReservadosOPendReserv;
+        }
     }
 }

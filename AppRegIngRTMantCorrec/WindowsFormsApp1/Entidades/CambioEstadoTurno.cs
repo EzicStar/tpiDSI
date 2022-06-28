@@ -20,5 +20,20 @@ namespace AplicacionPPAI.Models
         {
             return;
         }
+        public bool EsVigente()
+        {
+            if (fechaHoraHasta == null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool EsReservadoOPteReserva()
+        {
+            return estado.EsReservadoOPteReserva();
+        }
     }
 }

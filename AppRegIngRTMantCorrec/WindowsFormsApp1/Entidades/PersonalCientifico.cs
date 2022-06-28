@@ -27,5 +27,11 @@ namespace AplicacionPPAI.Models
             this.usuario = usuario;
         }
         public bool TengoUsuarioHabilitado() => usuario.EsHabilitado();
+
+        public string[] MostrarCientifico()
+        {
+            string[] datos = { legajo.ToString(), nombre, apellido, nroDocumento.ToString(), correoInsti, correoPersonal, telefono.ToString() };
+            return datos;
+        }
     }
 }

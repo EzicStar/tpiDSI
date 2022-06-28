@@ -26,7 +26,7 @@ namespace AplicacionPPAI.Models
         }
         public void CancelarPorMantenimientoCorrectivo(Estado estado)
         {
-            var cambioTurnoNew = new CambioEstadoTurno(DateTime.Now, DateTime.MaxValue,estado);
+            var cambioTurnoNew = new CambioEstadoTurno(DateTime.Now, DateTime.MaxValue, estado);
             cambioEstadoTurno.Add(cambioTurnoNew);
             cambioTurnoNew.Finalizar();
         }
@@ -37,6 +37,27 @@ namespace AplicacionPPAI.Models
                 return true;
             }
             return false;
+        }
+        public bool EsReservadoOPendienteDeReserva()
+        {
+            foreach (CambioEstadoTurno cambioEstado in cambioEstadoTurno)
+            {
+                if (cambioEstado.EsVigente() && cambioEstado.EsReservadoOPteReserva())
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public string[] MostrarCientifico()
+        {
+            return asigCientifico.MostrarCientifico();
+        }
+
+        public string[] MostrarTurno()
+        {
+            string[] datos = { fechaHoraInicio.ToString(), fechaHoraFin.ToString() };
+            return datos.Concat(MostrarCientifico()).ToArray();
         }
     }
 }

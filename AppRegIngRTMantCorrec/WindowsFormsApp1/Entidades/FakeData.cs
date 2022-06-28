@@ -71,8 +71,8 @@ namespace AplicacionPPAI.Models
         public static Estado EnMantCorrectivoRT { get; set; } = new Estado("En mantenimiento correctivo", "RT", false, false, "desc");
 
         //ESTADOS TURNO
-        public static Estado DisponibleTurno { get; set; } = new Estado("Disponible", "Turno", true, true, "desc");
-        public static Estado ReservadoTurno { get; set; } = new Estado("Disponible", "Turno", true, true, "desc");
+        public static Estado DisponibleTurno { get; set; } = new Estado("Disponible", "Turno", true, true, "desc"); // todo: modificar es reservable,
+        public static Estado ReservadoTurno { get; set; } = new Estado("Reservado", "Turno", true, true, "desc");
         public static Estado GeneradoTurno { get; set; } = new Estado("Generado", "Turno", true, true, "desc");
         public static Estado CanceladoTurno { get; set; } = new Estado("Cancelado", "Turno", true, true, "desc");
         public static Estado EnAnalisisTurno { get; set; } = new Estado("En analisis", "Turno", true, true, "desc");

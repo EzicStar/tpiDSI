@@ -21,5 +21,10 @@ namespace AplicacionPPAI.Models
             this.personalCientifico = personalCientifico;
             this.turnos = turnos;
         }
+
+        public string[] MostrarCientifico()
+        {
+            return personalCientifico.MostrarCientifico();
+        }
     }
 }

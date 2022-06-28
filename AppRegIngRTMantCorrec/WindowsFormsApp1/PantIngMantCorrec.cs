@@ -12,6 +12,7 @@ namespace AplicacionPPAI.Models
 {
     public partial class PantIngMantCorrec : Form
     {
+        ControladorIngresoMantCorrectivo controlador = new ControladorIngresoMantCorrectivo();
         public PantIngMantCorrec()
         {
             InitializeComponent();
@@ -39,7 +40,6 @@ namespace AplicacionPPAI.Models
             this.btnMantCorrec.BackColor = Color.FromArgb(0, 135, 137);
             this.btnHome.BackColor = Color.FromArgb(50, 52, 77);
 
-            ControladorIngresoMantCorrectivo controlador = new ControladorIngresoMantCorrectivo();
             controlador.RegIngRTMantCorrec(this);
         }
 
@@ -52,13 +52,30 @@ namespace AplicacionPPAI.Models
 
         private void btn_Select_Click(object sender, EventArgs e)
         {
-            if (dgw_Turnos.CurrentRow != null)
+            if (dgw_RTDisponibles.CurrentRow != null)
             {
-                this.groupBoxRTShow.Visible = false;
-                this.groupBoxRTCargaMotivo.Visible = true;
+                string _numRT = seleccionarRT();
+                controlador.RTSeleccionado(_numRT);
             }
             else
                 MessageBox.Show("No se seleccionó NADA.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private string seleccionarRT()
+        {
+
+            string tipo = dgw_RTDisponibles.CurrentRow.Cells[0].Value.ToString().ToUpper();
+            string num = dgw_RTDisponibles.CurrentRow.Cells[1].Value.ToString();
+            string marca = dgw_RTDisponibles.CurrentRow.Cells[2].Value.ToString().ToUpper();
+            string modelo = dgw_RTDisponibles.CurrentRow.Cells[3].Value.ToString().ToUpper();
+
+            this.lbl_tipoRt.Text = tipo + "  " + num + "    " + marca + "-" + modelo;
+            return num;
+        }
+        public void SolicitarRazonYFechaFinPrevista()
+        {
+            this.groupBoxRTShow.Visible = false;
+            this.groupBoxRTCargaMotivo.Visible = true;
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -69,7 +86,7 @@ namespace AplicacionPPAI.Models
 
         private void btn_Confirmar_Click(object sender, EventArgs e)
         {
-            if (this.txt_RazonIngreso.Text.Trim() == "")
+            if (this.txt_RazonIngreso.Text.Trim() != "")
             {
                 if (dgw_Turnos.CurrentRow != null)
                     if (this.chk_email.Checked || this.chk_wpp.Checked)
@@ -80,6 +97,8 @@ namespace AplicacionPPAI.Models
                         if (chk_email.Checked)
                             msg += "Email ";
                         MessageBox.Show(msg, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // 
+                        controlador.RazonYFechaFinPrevistaIngresada(txt_RazonIngreso.Text, dtp_fechaFinPrevista.Value.ToString());
                     }
                     else
                     {
@@ -92,13 +111,6 @@ namespace AplicacionPPAI.Models
                 MessageBox.Show("No se cargó el Motivo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void groupBoxRTCargaMotivo_Enter(object sender, EventArgs e)
-        {
-            this.lbl_tipoRt.Text = dgw_RTDisponibles.Rows[0].Cells[1].ToString();
-            this.lbl_numRt.Text = dgw_RTDisponibles.Rows[0].Cells[2].ToString();
-            this.lbl_marcaRt.Text = dgw_RTDisponibles.Rows[0].Cells[3].ToString();
-            this.lbl_modeloRt.Text = dgw_RTDisponibles.Rows[0].Cells[4].ToString();
-        }
 
         public void MostrarRTASeleccionar(List<string[]> infoRts)
         {
@@ -115,6 +127,27 @@ namespace AplicacionPPAI.Models
                 dgw_RTDisponibles.Rows.Add(infoRts[fila]);
             }
             
+        }
+        public void MostrarTurnosResAfect(List<string[]> infoTurnos)
+        {
+            dgw_Turnos.Columns.Clear();
+            dgw_Turnos.Rows.Clear();
+            dgw_Turnos.DataSource = null; //legajo nombre, apellido, nroDocumento.ToString(), correoInsti, correoPersonal, telefono. fechaHoraInicio fechaHoraFin
+            dgw_Turnos.Columns.Add("legajo", "N°Legajo");
+            dgw_Turnos.Columns.Add("nombre", "Nombre");
+            dgw_Turnos.Columns.Add("apellido", "Apellido");
+            dgw_Turnos.Columns.Add("nroDocumento", "N°Doc.");
+            dgw_Turnos.Columns.Add("correoInsti", "Mail Institucional");
+            dgw_Turnos.Columns.Add("correoPersonal", "Mail Personal");
+            dgw_Turnos.Columns.Add("telefono", "Telefono");
+            dgw_Turnos.Columns.Add("fechaHoraInicio", "Hrs. Inicio Turno");
+            dgw_Turnos.Columns.Add("fechaHoraFin", "Hrs. Fin Turno");
+
+            for (int fila = 0; fila < infoTurnos.Count; fila++)
+            {
+                dgw_Turnos.Rows.Add(infoTurnos[fila]);
+            }
+
         }
     }
 }

@@ -9,22 +9,56 @@ namespace AplicacionPPAI.Models
 {
     public class ControladorIngresoMantCorrectivo
     {
+        PantIngMantCorrec interfaz;
+        List<RecursoTecnologico> rtsASeleccionar;
+        RecursoTecnologico rtSeleccionado;
+        List<Turno> turnosResOPendRes;
+        string razonMantenimiento;
+        DateTime fechaFinPrevista;
         // registrar ingreso de rt en mantenimiento correctivo
         public void RegIngRTMantCorrec(PantIngMantCorrec interfaz)
         {
             // el objeto asignacion responsable tecnico del correspondiente usuario
             var miAsigRespTec = ObtenerRespTecnico();
             // lista de los recursos tecnologicos disponibles del resp tecnico
-            List<RecursoTecnologico> rtsASeleccionar =  miAsigRespTec.MisRTDisponibles();
+            rtsASeleccionar =  miAsigRespTec.MisRTDisponibles();
             List<RecursoTecnologico> rtsOrdenados = OrdenarRTsPorTipo(rtsASeleccionar);
             List<string[]> infoRts = new List<string[]>();
             foreach (RecursoTecnologico rt in rtsOrdenados)
             {
                 infoRts.Add(rt.MostrarRT());
             }
-            PantIngMantCorrec ventana = interfaz;
+            this.interfaz = interfaz;
 
             interfaz.MostrarRTASeleccionar(infoRts);
+        }
+
+        public void RTSeleccionado(string numeroRT)
+        {
+            // buscamos entre todos los numeros de los RT, el numero cuyo usuario seleccionó
+            for (int i = 0; i < rtsASeleccionar.Count; i++)
+            {
+                if (rtsASeleccionar[i].EsMiNum(Int32.Parse(numeroRT)))
+                {
+                    rtSeleccionado = rtsASeleccionar[i];
+                }
+            }
+            interfaz.SolicitarRazonYFechaFinPrevista();
+        }
+
+        public void RazonYFechaFinPrevistaIngresada(string razón, string fecha)
+        {
+            razonMantenimiento = razón;
+            fechaFinPrevista = DateTime.Parse(fecha);
+            turnosResOPendRes = rtSeleccionado.MostrarTurnosReservadosPorMC(fechaFinPrevista);
+            List<Turno> turnosOrdenados = OrdenarTurnosXCientifico(turnosResOPendRes);
+            List<string[]> infoTurnos = new List<string[]>();
+            foreach (Turno turno in turnosOrdenados)
+            {
+                infoTurnos.Add(turno.MostrarTurno());
+            }
+
+            interfaz.MostrarTurnosResAfect(infoTurnos);
         }
 
         public AsignacionResponsableTecnicoRT ObtenerRespTecnico()
@@ -52,6 +86,23 @@ namespace AplicacionPPAI.Models
                     if (String.Compare(listaAOrdenar[i].MostrarTipoRT(), listaAOrdenar[j].MostrarTipoRT()) >= 1)
                     {
                         RecursoTecnologico temp = listaAOrdenar[i];
+                        listaAOrdenar[i] = listaAOrdenar[j];
+                        listaAOrdenar[j] = temp;
+                    }
+
+                }
+            }
+            return listaAOrdenar;
+        }
+        public List<Turno> OrdenarTurnosXCientifico(List<Turno> listaAOrdenar)
+        {
+            for (int i = 0; i < (listaAOrdenar.Count - 1); i++)
+            {
+                for (int j = i + 1; j < listaAOrdenar.Count; j++)
+                {
+                    if (Int64.Parse(listaAOrdenar[i].MostrarCientifico()[0]) <= Int64.Parse(listaAOrdenar[j].MostrarCientifico()[0])) // ordena por legajo los cientfiicos
+                    {
+                        Turno temp = listaAOrdenar[i];
                         listaAOrdenar[i] = listaAOrdenar[j];
                         listaAOrdenar[j] = temp;
                     }

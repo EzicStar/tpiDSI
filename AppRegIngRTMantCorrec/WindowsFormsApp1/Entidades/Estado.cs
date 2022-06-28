@@ -38,7 +38,7 @@ namespace AplicacionPPAI.Models
         }
         public bool EsReservadoOPteReserva()
         {
-            if (!this.esReservable)
+            if (nombre=="Reservado" || nombre == "En analisis")
             {
                 return true;
             }

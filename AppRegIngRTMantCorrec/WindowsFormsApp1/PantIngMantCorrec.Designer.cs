@@ -55,9 +55,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dtp_fechaFinPrevista = new System.Windows.Forms.DateTimePicker();
-            this.lbl_modeloRt = new System.Windows.Forms.Label();
-            this.lbl_marcaRt = new System.Windows.Forms.Label();
-            this.lbl_numRt = new System.Windows.Forms.Label();
             this.lbl_tipoRt = new System.Windows.Forms.Label();
             this.txt_RazonIngreso = new System.Windows.Forms.TextBox();
             this.panelMenu.SuspendLayout();
@@ -315,9 +312,6 @@
             this.groupBoxRTCargaMotivo.Controls.Add(this.label7);
             this.groupBoxRTCargaMotivo.Controls.Add(this.label6);
             this.groupBoxRTCargaMotivo.Controls.Add(this.dtp_fechaFinPrevista);
-            this.groupBoxRTCargaMotivo.Controls.Add(this.lbl_modeloRt);
-            this.groupBoxRTCargaMotivo.Controls.Add(this.lbl_marcaRt);
-            this.groupBoxRTCargaMotivo.Controls.Add(this.lbl_numRt);
             this.groupBoxRTCargaMotivo.Controls.Add(this.lbl_tipoRt);
             this.groupBoxRTCargaMotivo.Controls.Add(this.txt_RazonIngreso);
             this.groupBoxRTCargaMotivo.Location = new System.Drawing.Point(210, 100);
@@ -326,48 +320,6 @@
             this.groupBoxRTCargaMotivo.TabIndex = 8;
             this.groupBoxRTCargaMotivo.TabStop = false;
             this.groupBoxRTCargaMotivo.Visible = false;
-            this.groupBoxRTCargaMotivo.Enter += new System.EventHandler(this.groupBoxRTCargaMotivo_Enter);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(21, 315);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(13, 17);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "*";
-            // 
-            // chk_email
-            // 
-            this.chk_email.AutoSize = true;
-            this.chk_email.Location = new System.Drawing.Point(52, 357);
-            this.chk_email.Name = "chk_email";
-            this.chk_email.Size = new System.Drawing.Size(51, 17);
-            this.chk_email.TabIndex = 14;
-            this.chk_email.Text = "Email";
-            this.chk_email.UseVisualStyleBackColor = true;
-            // 
-            // chk_wpp
-            // 
-            this.chk_wpp.AutoSize = true;
-            this.chk_wpp.Location = new System.Drawing.Point(52, 334);
-            this.chk_wpp.Name = "chk_wpp";
-            this.chk_wpp.Size = new System.Drawing.Size(79, 17);
-            this.chk_wpp.TabIndex = 13;
-            this.chk_wpp.Text = "Whats App";
-            this.chk_wpp.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(35, 315);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(69, 13);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Notificar Vía:";
             // 
             // label9
             // 
@@ -480,39 +432,6 @@
             this.dtp_fechaFinPrevista.Size = new System.Drawing.Size(156, 20);
             this.dtp_fechaFinPrevista.TabIndex = 6;
             // 
-            // lbl_modeloRt
-            // 
-            this.lbl_modeloRt.AutoSize = true;
-            this.lbl_modeloRt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lbl_modeloRt.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lbl_modeloRt.Location = new System.Drawing.Point(321, 18);
-            this.lbl_modeloRt.Name = "lbl_modeloRt";
-            this.lbl_modeloRt.Size = new System.Drawing.Size(67, 20);
-            this.lbl_modeloRt.TabIndex = 5;
-            this.lbl_modeloRt.Text = "Modelo";
-            // 
-            // lbl_marcaRt
-            // 
-            this.lbl_marcaRt.AutoSize = true;
-            this.lbl_marcaRt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lbl_marcaRt.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lbl_marcaRt.Location = new System.Drawing.Point(223, 18);
-            this.lbl_marcaRt.Name = "lbl_marcaRt";
-            this.lbl_marcaRt.Size = new System.Drawing.Size(58, 20);
-            this.lbl_marcaRt.TabIndex = 4;
-            this.lbl_marcaRt.Text = "Marca";
-            // 
-            // lbl_numRt
-            // 
-            this.lbl_numRt.AutoSize = true;
-            this.lbl_numRt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lbl_numRt.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lbl_numRt.Location = new System.Drawing.Point(118, 18);
-            this.lbl_numRt.Name = "lbl_numRt";
-            this.lbl_numRt.Size = new System.Drawing.Size(71, 20);
-            this.lbl_numRt.TabIndex = 3;
-            this.lbl_numRt.Text = "Numero";
-            // 
             // lbl_tipoRt
             // 
             this.lbl_tipoRt.AutoSize = true;
@@ -520,9 +439,9 @@
             this.lbl_tipoRt.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.lbl_tipoRt.Location = new System.Drawing.Point(16, 18);
             this.lbl_tipoRt.Name = "lbl_tipoRt";
-            this.lbl_tipoRt.Size = new System.Drawing.Size(71, 20);
+            this.lbl_tipoRt.Size = new System.Drawing.Size(75, 20);
             this.lbl_tipoRt.TabIndex = 2;
-            this.lbl_tipoRt.Text = "Tipo RT";
+            this.lbl_tipoRt.Text = "Detalles";
             // 
             // txt_RazonIngreso
             // 
@@ -582,9 +501,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dtp_fechaFinPrevista;
-        private System.Windows.Forms.Label lbl_modeloRt;
-        private System.Windows.Forms.Label lbl_marcaRt;
-        private System.Windows.Forms.Label lbl_numRt;
         private System.Windows.Forms.Label lbl_tipoRt;
         private System.Windows.Forms.TextBox txt_RazonIngreso;
         private System.Windows.Forms.Label label9;
