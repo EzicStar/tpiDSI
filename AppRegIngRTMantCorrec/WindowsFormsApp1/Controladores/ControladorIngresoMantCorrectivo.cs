@@ -9,31 +9,25 @@ namespace AplicacionPPAI.Controladores
 {
     public class ControladorIngresoMantCorrectivo
     {
-         // registrar ingreso de rt en mantenimiento correctivo
+        // registrar ingreso de rt en mantenimiento correctivo
         public void RegIngRTMantCorrec()
         {
             ObtenerRespTecnico();
         }
 
-        public PersonalCientifico ObtenerRespTecnico()
+        public AsignacionResponsableTecnicoRT ObtenerRespTecnico()
         {
-            return FakeData.SesionActual.GetPersonalCientif();
-        }
+            PersonalCientifico personalCientif = FakeData.SesionActual.GetPersonalCientif();
 
-        //loop buscar Asignacion Responsable Tecnico RT que sea del cientifico logueado y que sea vigente
-        public AsignacionResponsableTecnicoRT esDeUsuarioLogueadoYVigente()
-        {
-            //int count = AsignacionResponsableTecnicoRT.
-            int length = FakeData.ListaAsignaciones.Count;
-
-            for (int i = 0; i < 2 ; i++)
+            int lenAsig = FakeData.ListaAsignaciones.Count;
+            for (int i = 0; i < lenAsig; i++)
             {
-   Ignorando             if ()
+                if (FakeData.ListaAsignaciones[i].EsUsuarioLogueadoYVigente(personalCientif) == true)
                 {
-
+                    return FakeData.ListaAsignaciones[i];
                 }
             }
-                
+            return null;
         }
 
     }
