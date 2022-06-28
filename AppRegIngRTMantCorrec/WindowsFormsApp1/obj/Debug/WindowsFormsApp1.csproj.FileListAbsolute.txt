@@ -49,3 +49,4 @@ G:\Facultad\3° año\DSI Diseño de Sistemas\PPAI Grupo X\WinFormsCU\tpiDSI\AppR
 G:\Facultad\3° año\DSI Diseño de Sistemas\PPAI Grupo X\WinFormsCU\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.ValueTuple.xml
 G:\Facultad\3° año\DSI Diseño de Sistemas\PPAI Grupo X\WinFormsCU\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
 G:\Facultad\3° año\DSI Diseño de Sistemas\PPAI Grupo X\WinFormsCU\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
