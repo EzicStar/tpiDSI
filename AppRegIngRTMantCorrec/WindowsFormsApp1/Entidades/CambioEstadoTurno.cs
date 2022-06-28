@@ -33,7 +33,9 @@ namespace AplicacionPPAI.Models
         }
         public bool EsReservadoOPteReserva()
         {
-            return estado.EsReservadoOPteReserva();
+            if (estado != null)
+                return estado.EsReservadoOPteReserva();
+            return false;
         }
     }
 }

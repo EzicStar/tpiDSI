@@ -427,7 +427,7 @@
             this.dtp_fechaFinPrevista.CustomFormat = "dd MMMM yyyy";
             this.dtp_fechaFinPrevista.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_fechaFinPrevista.Location = new System.Drawing.Point(141, 83);
-            this.dtp_fechaFinPrevista.MinDate = new System.DateTime(2022, 6, 28, 0, 0, 0, 0);
+            this.dtp_fechaFinPrevista.MinDate = new System.DateTime(2017, 3, 14, 0, 0, 0, 0);
             this.dtp_fechaFinPrevista.Name = "dtp_fechaFinPrevista";
             this.dtp_fechaFinPrevista.Size = new System.Drawing.Size(156, 20);
             this.dtp_fechaFinPrevista.TabIndex = 6;

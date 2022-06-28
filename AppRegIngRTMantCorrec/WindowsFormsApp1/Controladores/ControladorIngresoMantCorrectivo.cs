@@ -59,6 +59,10 @@ namespace AplicacionPPAI.Models
             turnosResOPendRes = rtSeleccionado.MostrarTurnosReservadosPorMC(fechaFinPrevista);
             List<Turno> turnosOrdenados = OrdenarTurnosXCientifico(turnosResOPendRes);
             List<string[]> infoTurnos = new List<string[]>();
+            if (turnosResOPendRes.Count == 0)
+            {
+                interfaz.InformarFaltaDeTurno();
+            }
             foreach (Turno turno in turnosOrdenados)
             {
                 string[] infoTurno = turno.MostrarTurno();

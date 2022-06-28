@@ -112,6 +112,10 @@ namespace AplicacionPPAI.Models
                 MessageBox.Show("No se cargó el Motivo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
+        public void InformarFaltaDeTurno()
+        {
+            MessageBox.Show("No hay turno para el cientifico");
+        }
 
         public void MostrarRTASeleccionar(List<string[]> infoRts)
         {
@@ -134,6 +138,8 @@ namespace AplicacionPPAI.Models
             dgw_Turnos.Columns.Clear();
             dgw_Turnos.Rows.Clear();
             dgw_Turnos.DataSource = null; //legajo nombre, apellido, nroDocumento.ToString(), correoInsti, correoPersonal, telefono. fechaHoraInicio fechaHoraFin
+            dgw_Turnos.Columns.Add("fechaHoraFin", "Hrs. Fin Turno");
+            dgw_Turnos.Columns.Add("fechaHoraInicio", "Hrs. Inicio Turno");
             dgw_Turnos.Columns.Add("legajo", "N°Legajo");
             dgw_Turnos.Columns.Add("nombre", "Nombre");
             dgw_Turnos.Columns.Add("apellido", "Apellido");
@@ -141,8 +147,6 @@ namespace AplicacionPPAI.Models
             dgw_Turnos.Columns.Add("correoInsti", "Mail Institucional");
             dgw_Turnos.Columns.Add("correoPersonal", "Mail Personal");
             dgw_Turnos.Columns.Add("telefono", "Telefono");
-            dgw_Turnos.Columns.Add("fechaHoraInicio", "Hrs. Inicio Turno");
-            dgw_Turnos.Columns.Add("fechaHoraFin", "Hrs. Fin Turno");
 
             for (int fila = 0; fila < infoTurnos.Count; fila++)
             {

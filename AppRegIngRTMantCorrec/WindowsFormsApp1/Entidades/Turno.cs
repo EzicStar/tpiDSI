@@ -38,8 +38,8 @@ namespace AplicacionPPAI.Models
         }
         public bool EsEnPeriodo(DateTime fechaHasta) //acassaa
         {
-            if (this.fechaHoraInicio.Year > 2018)
-            //if (DateTime.Compare(this.fechaHoraInicio, fechaHasta) > 0)//(fechaHasta > this.fechaHoraInicio)
+            //if (this.fechaHoraInicio.Year > 2018)
+            if (DateTime.Compare(fechaHasta, this.fechaHoraInicio) > 0 && DateTime.Compare(fechaHoraInicio, DateTime.Now) > 0)//(fechaHasta > this.fechaHoraInicio)
             {
                 return true;
             }
