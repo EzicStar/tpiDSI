@@ -80,6 +80,9 @@ namespace AplicacionPPAI.Models
         public static Estado AnuladoTurno { get; set; } = new Estado("Anulado", "Turno", true, true, "desc");
         public static Estado FinalizadoTurno { get; set; } = new Estado("Finalizado", "Turno", true, true, "desc");
 
+        //LISTA DE TODOS LOS ESTADOS 
+        public static Estado[] estados = { Disponible, Habilitado, DeBaja, EnMantPreventivo, EnMantCorrectivo, DisponibleTurno, ReservadoTurno, GeneradoTurno, CanceladoTurno, EnAnalisisTurno, FinSinUsoTurno, AnuladoTurno, FinalizadoTurno };
+
         //CAMBIOS ESTADOS
         //CAMBIO ESTADO RT
         public static CambioEstadoRT CambioEstadoRT1 { get; set; } = new CambioEstadoRT(new DateTime(), null, DisponibleRT);

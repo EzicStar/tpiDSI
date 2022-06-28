@@ -15,6 +15,9 @@ namespace AplicacionPPAI.Models
         List<Turno> turnosResOPendRes;
         string razonMantenimiento;
         DateTime fechaFinPrevista;
+        string tipoNotif;
+        Estado[] estados;
+
         // registrar ingreso de rt en mantenimiento correctivo
         public void RegIngRTMantCorrec(PantIngMantCorrec interfaz)
         {
@@ -58,7 +61,18 @@ namespace AplicacionPPAI.Models
                 infoTurnos.Add(turno.MostrarTurno());
             }
 
-            interfaz.MostrarTurnosResAfect(infoTurnos);
+            interfaz.MostrarTurnosResAfect(infoTurnos); // tmb solicita confirmacion y tipo de notificacion
+        }
+        
+        public void ConfirmacionIngresada(bool mail, bool wpp)
+        {
+            //aca empieza la creacion del mantenimiento
+            estados = FakeData.estados;
+            foreach (Estado estado in estados)
+            {
+                EsAmbitoTurno();
+                estado.EsAmbitoTurno();
+            }
         }
 
         public AsignacionResponsableTecnicoRT ObtenerRespTecnico()

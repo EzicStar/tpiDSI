@@ -99,6 +99,7 @@ namespace AplicacionPPAI.Models
                         MessageBox.Show(msg, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         // 
                         controlador.RazonYFechaFinPrevistaIngresada(txt_RazonIngreso.Text, dtp_fechaFinPrevista.Value.ToString());
+                        controlador.ConfirmacionIngresada(chk_email.Checked, chk_wpp.Checked);
                     }
                     else
                     {
