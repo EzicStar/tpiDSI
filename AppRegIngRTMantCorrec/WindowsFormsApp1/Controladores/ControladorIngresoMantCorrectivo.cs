@@ -19,7 +19,7 @@ namespace AplicacionPPAI.Models
         Estado[] estados;
         Estado cancelado;
         Estado conIngEnMantCorrec;
-        List<string> mailsCientificos;
+        List<string> mailsCientificos = new List<string>();
 
         // registrar ingreso de rt en mantenimiento correctivo
         public void RegIngRTMantCorrec(PantIngMantCorrec interfaz)
@@ -67,7 +67,7 @@ namespace AplicacionPPAI.Models
             {
                 string[] infoTurno = turno.MostrarTurno();
                 infoTurnos.Add(infoTurno);
-                //mailsCientificos.Add(infoTurno[6]);
+                mailsCientificos.Add(infoTurno[6]);
             }
 
             interfaz.MostrarTurnosResAfect(infoTurnos); // tmb solicita confirmacion y tipo de notificacion

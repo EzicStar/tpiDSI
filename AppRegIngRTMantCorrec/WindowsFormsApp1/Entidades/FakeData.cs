@@ -12,8 +12,8 @@ namespace AplicacionPPAI.Models
         public static PersonalCientifico Cientifico1 { get; set; } = new PersonalCientifico(738734, "Ernesto", "Ambrosini",
                                                 43524643, "erniInst@gmail.com", "erni@gmail.com", 27842387, UserCientifico1);
 
-        public static PersonalCientifico Cientifico2 { get; set; } = new PersonalCientifico(738147, "Pablo", "Rosas",
-                                                43524643, "pabloInct@gmail.com", "rositas@gmail.com", 2894723, UserCientifico2);
+        public static PersonalCientifico Cientifico2 { get; set; } = new PersonalCientifico(738147, "Germán", "Vélez",
+                                                43524643, "germanevelez@hotmail.com", "germanevelez@hotmail.com", 2894723, UserCientifico2);
 
         public static PersonalCientifico Cientifico3 { get; set; } = new PersonalCientifico(80903, "Juan", "Perez",
                                                 717812, "juanInst@gmail.com", "pablo@gmail.com", 32534, UserCientifico3);
@@ -145,12 +145,15 @@ namespace AplicacionPPAI.Models
         //RECURSOS TECNOLOGICOS
         public static RecursoTecnologico Rec1 { get; set; } = new RecursoTecnologico(12, new DateTime(2019, 5, 11), "hola.jpg", 12, 1, "nose",
         TipoRT1, Modelo1, mantenimientosRec1, cambioEstadoRTsRec1, TurnosRT1);
-
         public static RecursoTecnologico Rec2 { get; set; } = new RecursoTecnologico(32, new DateTime(2019, 5, 11), "pep.jpg", 32, 4, "nose",
             TipoRT2, Modelo3, mantenimientosRec2, cambioEstadoRTsRec2, TurnosRT2);
+        public static RecursoTecnologico Rec3 { get; set; } = new RecursoTecnologico(22, new DateTime(2019, 5, 11), "pep.jpg", 32, 4, "nose",
+            TipoRT3, Modelo2, mantenimientosRec2, cambioEstadoRTsRec2, TurnosRT2);
+        public static RecursoTecnologico Rec4 { get; set; } = new RecursoTecnologico(40, new DateTime(2019, 5, 11), "pep.jpg", 32, 4, "nose",
+            TipoRT3, Modelo1, mantenimientosRec2, cambioEstadoRTsRec2, TurnosRT2);
 
         // LISTA DE RECURSOS TECNOLOGICOS
-        static List<RecursoTecnologico> ListaRec1 { get; set; } = new List<RecursoTecnologico> { Rec1, Rec2 };
+        static List<RecursoTecnologico> ListaRec1 { get; set; } = new List<RecursoTecnologico> { Rec1, Rec2, Rec3, Rec4 };
         static List<RecursoTecnologico> ListaRec2 { get; set; } = new List<RecursoTecnologico> { Rec2 };
 
         //ASIGNACIONES RESPONSABLES RT
