@@ -52,13 +52,13 @@ namespace AplicacionPPAI.Models
 
         private void btn_Select_Click(object sender, EventArgs e)
         {
-            if (dgw_RTDisponibles.CurrentRow != null)
-            {
+            //if (dgw_RTDisponibles.CurrentRow != null)
+            //{
                 string _numRT = seleccionarRT();
                 controlador.RTSeleccionado(_numRT);
-            }
-            else
-                MessageBox.Show("No se seleccionó NADA.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+            //else
+            //    MessageBox.Show("No se seleccionó NADA.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private string seleccionarRT()
