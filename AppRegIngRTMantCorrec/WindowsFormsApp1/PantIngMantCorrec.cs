@@ -20,13 +20,17 @@ namespace AplicacionPPAI.Models
 
         private void button1_Click(object sender, EventArgs e)
         {
+            InterfazHome();
+        }
+
+        private void InterfazHome()
+        {
             this.lbl_Titulo.Text = "HOME";
             this.btnHome.BackColor = Color.FromArgb(0, 135, 137);
             this.btnMantCorrec.BackColor = Color.FromArgb(50, 52, 77);
             this.groupBoxRTCargaMotivo.Visible = false;
             this.groupBoxRTShow.Visible = false;
         }
-
         //private void button1_Click_1(object sender, EventArgs e)
         //{
         //    AplicacionPPAI.Controladores.ControladorIngresoMantCorrectivo controlador = new AplicacionPPAI.Controladores.ControladorIngresoMantCorrectivo();
@@ -47,6 +51,7 @@ namespace AplicacionPPAI.Models
         {
             //invisibiliza todo
             this.groupBoxRTShow.Visible = false;
+            InterfazHome();
             //recarga grilla
         }
 
@@ -78,11 +83,7 @@ namespace AplicacionPPAI.Models
             this.groupBoxRTCargaMotivo.Visible = true;
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-            //saber cuando cambie el valor, deba
-            //cargar la grilla con los turnos de esa fecha
-        }
+
 
         private void btn_Confirmar_Click(object sender, EventArgs e)
         {
@@ -114,7 +115,7 @@ namespace AplicacionPPAI.Models
 
         public void InformarFaltaDeTurno()
         {
-            MessageBox.Show("No hay turno para el cientifico");
+            lbl_NoHayTurnos.Visible = true;
         }
 
         public void MostrarRTASeleccionar(List<string[]> infoRts)
@@ -157,7 +158,20 @@ namespace AplicacionPPAI.Models
 
         private void dtp_fechaFinPrevista_ValueChanged(object sender, EventArgs e)
         {
+            lbl_NoHayTurnos.Visible = false;
             controlador.RazonYFechaFinPrevistaIngresada(txt_RazonIngreso.Text, dtp_fechaFinPrevista.Value.ToString());
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            groupBoxRTCargaMotivo.Visible = false;
+            txt_RazonIngreso.Text = "";
+            dtp_fechaFinPrevista.Value = DateTime.Now;
+            dgw_Turnos.Columns.Clear();
+            dgw_Turnos.Rows.Clear();
+            chk_email.Checked = false;
+            chk_wpp.Checked = false;
+            groupBoxRTShow.Visible = true;
         }
     }
 }

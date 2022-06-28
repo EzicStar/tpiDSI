@@ -17,16 +17,20 @@ namespace AplicacionPPAI.Models
 
         public static PersonalCientifico Cientifico3 { get; set; } = new PersonalCientifico(80903, "Juan", "Perez",
                                                 717812, "juanInst@gmail.com", "pablo@gmail.com", 32534, UserCientifico3);
+        public static PersonalCientifico Cientifico4 { get; set; } = new PersonalCientifico(738734, "Ernesto", "Ambrosini",
+                                                43524643, "erniInst@gmail.com", "erni@gmail.com", 27842387, UserCientifico4);
 
         // ASIGNACION CIENTIFICO DEL CI
         public static AsignacionCientificoDelCI AsignacionC1 { get; set; } = new AsignacionCientificoDelCI(new DateTime(), null, Cientifico1, TurnosRT1);
         public static AsignacionCientificoDelCI AsignacionC2 { get; set; } = new AsignacionCientificoDelCI(new DateTime(), null, Cientifico2, TurnosRT2);
         public static AsignacionCientificoDelCI AsignacionC3 { get; set; } = new AsignacionCientificoDelCI(new DateTime(), null, Cientifico3, TurnosRT2);
+        public static AsignacionCientificoDelCI AsignacionC4 { get; set; } = new AsignacionCientificoDelCI(new DateTime(), null, Cientifico4, TurnosRT2);
 
         //USUARIOS
         public static Usuario UserCientifico1 { get; set; } = new Usuario("Gandalf", "asdfasdf", true, Cientifico1); //----------------------------------
         public static Usuario UserCientifico2 { get; set; } = new Usuario("pablo1", "829dufhweiru", true, Cientifico2);
         public static Usuario UserCientifico3 { get; set; } = new Usuario("Juancho", "8rwr4u", true, Cientifico3);
+        public static Usuario UserCientifico4 { get; set; } = new Usuario("PANA", "ROCHA", true, Cientifico4);
 
         //SESIONES
         public static Sesion SesionActual { get; set; } = new Sesion(new DateTime(), null, UserCientifico1);
@@ -123,17 +127,19 @@ namespace AplicacionPPAI.Models
         static List<CambioEstadoTurno> cambioEstadoTurno4 = new List<CambioEstadoTurno> { cambioEstadoT1, cambioEstadoT6, cambioEstadoT7, cambioEstadoT9 };
         static List<CambioEstadoTurno> cambioEstadoTurno5 = new List<CambioEstadoTurno> { cambioEstadoT1, cambioEstadoT6, cambioEstadoT7, cambioEstadoT2 };
         static List<CambioEstadoTurno> cambioEstadoTurno6 = new List<CambioEstadoTurno> { cambioEstadoT10, cambioEstadoT6, cambioEstadoT7 };
-        //TURNOS  todo: aÃ±adir datos con fecha posible!!!! gracias
-        public static Turno Turno1 { get; set; } = new Turno(12, new DateTime(2022, 6, 29), 3, new DateTime(2022, 6, 4), new DateTime(2022, 6, 4), cambioEstadoTurno1, AsignacionC1);
-        public static Turno Turno2 { get; set; } = new Turno(22, new DateTime(2022, 6, 29), 4, new DateTime(2022, 6, 3), new DateTime(2022, 6, 3), cambioEstadoTurno2, AsignacionC3);
-        public static Turno Turno3 { get; set; } = new Turno(4, new DateTime(2022, 6, 30), 3, new DateTime(2022, 6, 29), new DateTime(2022, 6, 29), cambioEstadoTurno3, AsignacionC2);
+        //TURNOS  
+        public static Turno Turno1 { get; set; } = new Turno(12, new DateTime(2022, 6, 29), 3, new DateTime(2022, 6, 29), new DateTime(2022, 6, 29), cambioEstadoTurno1, AsignacionC1);
+        public static Turno Turno2 { get; set; } = new Turno(22, new DateTime(2022, 6, 29), 4, new DateTime(2022, 6, 29), new DateTime(2022, 6, 29), cambioEstadoTurno2, AsignacionC3);
+        public static Turno Turno3 { get; set; } = new Turno(4, new DateTime(2022, 6, 30), 3, new DateTime(2022, 6, 30), new DateTime(2022, 6, 30), cambioEstadoTurno3, AsignacionC2);
         public static Turno Turno4 { get; set; } = new Turno(4, new DateTime(2022, 6, 30), 3, new DateTime(2022, 6, 30), new DateTime(2022, 6, 30), cambioEstadoTurno4, AsignacionC3);
         public static Turno Turno5 { get; set; } = new Turno(4, new DateTime(2022, 7, 5), 3, new DateTime(2022, 6, 10), new DateTime(2022, 6, 10), cambioEstadoTurno5, AsignacionC1);
-        public static Turno Turno6 { get; set; } = new Turno(4, new DateTime(2022, 7, 15), 3, new DateTime(2022, 7, 1), new DateTime(2022, 7, 1), cambioEstadoTurno6, AsignacionC2);
+        public static Turno Turno6 { get; set; } = new Turno(4, new DateTime(2022, 7, 15), 3, new DateTime(2022, 7, 5), new DateTime(2022, 7, 5), cambioEstadoTurno6, AsignacionC2);
+        public static Turno Turno7 { get; set; } = new Turno(4, new DateTime(2022, 7, 15), 3, new DateTime(2022, 7, 10), new DateTime(2022, 7, 10), cambioEstadoTurno2, AsignacionC4);
+        public static Turno Turno8 { get; set; } = new Turno(4, new DateTime(2022, 7, 15), 3, new DateTime(2022, 7, 15), new DateTime(2022, 7, 15), cambioEstadoTurno3, AsignacionC4);
 
         // LISTA DE TURNOS
-        static List<Turno> TurnosRT1 = new List<Turno> { Turno1, Turno2, Turno3, Turno4, Turno5, Turno6};
-        static List<Turno> TurnosRT2 = new List<Turno> { Turno3, Turno5, Turno6 };
+        static List<Turno> TurnosRT1 = new List<Turno> { Turno3, Turno5, Turno6 };
+        static List<Turno> TurnosRT2 = new List<Turno> { Turno1, Turno2, Turno3, Turno4, Turno5, Turno6, Turno7, Turno8 };
 
 
         //RECURSOS TECNOLOGICOS

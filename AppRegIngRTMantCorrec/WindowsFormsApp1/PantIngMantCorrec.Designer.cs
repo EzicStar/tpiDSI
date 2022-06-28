@@ -49,7 +49,7 @@
             this.chk_email = new System.Windows.Forms.CheckBox();
             this.chk_wpp = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_Confirmar = new System.Windows.Forms.Button();
             this.dgw_Turnos = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
@@ -57,6 +57,7 @@
             this.dtp_fechaFinPrevista = new System.Windows.Forms.DateTimePicker();
             this.lbl_tipoRt = new System.Windows.Forms.Label();
             this.txt_RazonIngreso = new System.Windows.Forms.TextBox();
+            this.lbl_NoHayTurnos = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelTitle.SuspendLayout();
             this.groupBoxRTShow.SuspendLayout();
@@ -248,7 +249,7 @@
             // 
             // btn_Cancel
             // 
-            this.btn_Cancel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btn_Cancel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_Cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
             this.btn_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Cancel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -302,11 +303,12 @@
             this.groupBoxRTCargaMotivo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxRTCargaMotivo.Controls.Add(this.lbl_NoHayTurnos);
             this.groupBoxRTCargaMotivo.Controls.Add(this.label9);
             this.groupBoxRTCargaMotivo.Controls.Add(this.chk_email);
             this.groupBoxRTCargaMotivo.Controls.Add(this.chk_wpp);
             this.groupBoxRTCargaMotivo.Controls.Add(this.label8);
-            this.groupBoxRTCargaMotivo.Controls.Add(this.button1);
+            this.groupBoxRTCargaMotivo.Controls.Add(this.btn_cancelar);
             this.groupBoxRTCargaMotivo.Controls.Add(this.btn_Confirmar);
             this.groupBoxRTCargaMotivo.Controls.Add(this.dgw_Turnos);
             this.groupBoxRTCargaMotivo.Controls.Add(this.label7);
@@ -362,18 +364,19 @@
             this.label8.TabIndex = 12;
             this.label8.Text = "Notificar Vía:";
             // 
-            // button1
+            // btn_cancelar
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(6, 394);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(275, 36);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_cancelar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
+            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_cancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_cancelar.Location = new System.Drawing.Point(6, 394);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(275, 36);
+            this.btn_cancelar.TabIndex = 11;
+            this.btn_cancelar.Text = "Cancelar";
+            this.btn_cancelar.UseVisualStyleBackColor = false;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_Confirmar
             // 
@@ -451,6 +454,18 @@
             this.txt_RazonIngreso.Size = new System.Drawing.Size(156, 20);
             this.txt_RazonIngreso.TabIndex = 0;
             // 
+            // lbl_NoHayTurnos
+            // 
+            this.lbl_NoHayTurnos.AutoSize = true;
+            this.lbl_NoHayTurnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lbl_NoHayTurnos.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lbl_NoHayTurnos.Location = new System.Drawing.Point(320, 85);
+            this.lbl_NoHayTurnos.Name = "lbl_NoHayTurnos";
+            this.lbl_NoHayTurnos.Size = new System.Drawing.Size(232, 17);
+            this.lbl_NoHayTurnos.TabIndex = 17;
+            this.lbl_NoHayTurnos.Text = "NO HAY TURNOS ASIGNADOS";
+            this.lbl_NoHayTurnos.Visible = false;
+            // 
             // PantIngMantCorrec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -459,8 +474,8 @@
             this.ClientSize = new System.Drawing.Size(789, 552);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelMenu);
-            this.Controls.Add(this.groupBoxRTCargaMotivo);
             this.Controls.Add(this.groupBoxRTShow);
+            this.Controls.Add(this.groupBoxRTCargaMotivo);
             this.MinimumSize = new System.Drawing.Size(805, 591);
             this.Name = "PantIngMantCorrec";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -496,7 +511,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgw_RTDisponibles;
         private System.Windows.Forms.GroupBox groupBoxRTCargaMotivo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button btn_Confirmar;
         private System.Windows.Forms.DataGridView dgw_Turnos;
         private System.Windows.Forms.Label label7;
@@ -508,6 +523,7 @@
         private System.Windows.Forms.CheckBox chk_email;
         private System.Windows.Forms.CheckBox chk_wpp;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbl_NoHayTurnos;
     }
 }
 
