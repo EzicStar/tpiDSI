@@ -17,7 +17,7 @@ namespace AplicacionPPAI.Models
         private Modelo modelo;
         private List<Mantenimiento> mantenimientos;
         private List<CambioEstadoRT> cambioEstadoRT;
-        private List<Turno> turnos;  
+        private List<Turno> turnos;
 
         public RecursoTecnologico(int nroRT, DateTime fechaAlta, string imagenes, int perioricidadMantPrev, int duracionMantPrev, string fraccionHorarioTurno, TipoRT tipoRT, Modelo modelo, List<Mantenimiento> mantenimientos, List<CambioEstadoRT> cambioEstadoRT, List<Turno> turnos)
         {
@@ -44,11 +44,11 @@ namespace AplicacionPPAI.Models
                 }
             }
             return false;
-        } 
+        }
 
         public void EnMantenimientoCorrectivo(Estado estado, DateTime fechaInicio, DateTime fechaHasta, string motivo)
         {
-            foreach(Turno turno in turnos)
+            foreach (Turno turno in turnos)
             {
                 if (turno.EsEnPeriodo(fechaHasta))
                 {

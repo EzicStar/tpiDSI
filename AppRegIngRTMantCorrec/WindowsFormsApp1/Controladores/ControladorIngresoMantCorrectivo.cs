@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AplicacionPPAI.Controladores
+namespace AplicacionPPAI.Models
 {
     public class ControladorIngresoMantCorrectivo
     {
         // registrar ingreso de rt en mantenimiento correctivo
-        public void RegIngRTMantCorrec()
+        public void RegIngRTMantCorrec(PantIngMantCorrec interfaz)
         {
             // el objeto asignacion responsable tecnico del correspondiente usuario
             var miAsigRespTec = ObtenerRespTecnico();
@@ -22,8 +22,9 @@ namespace AplicacionPPAI.Controladores
             {
                 infoRts.Add(rt.MostrarRT());
             }
-            PantIngMantCorrec.MostrarRTASeleccionar(infoRts);
-            
+            PantIngMantCorrec ventana = interfaz;
+
+            interfaz.MostrarRTASeleccionar(infoRts);
         }
 
         public AsignacionResponsableTecnicoRT ObtenerRespTecnico()

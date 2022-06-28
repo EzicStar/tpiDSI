@@ -18,7 +18,7 @@ namespace AplicacionPPAI.Models
         }
         public void Finalizar()
         {
-            this.estado.Finalizar();
+            return;
         }
     }
 }

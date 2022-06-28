@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace AplicacionPPAI.Models
 {
     public partial class PantIngMantCorrec : Form
     {
@@ -38,40 +38,81 @@ namespace WindowsFormsApp1
             this.groupBoxRTShow.Visible = true;
             this.btnMantCorrec.BackColor = Color.FromArgb(0, 135, 137);
             this.btnHome.BackColor = Color.FromArgb(50, 52, 77);
+
+            ControladorIngresoMantCorrectivo controlador = new ControladorIngresoMantCorrectivo();
+            controlador.RegIngRTMantCorrec(this);
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
             //invisibiliza todo
             this.groupBoxRTShow.Visible = false;
+            //recarga grilla
         }
 
         private void btn_Select_Click(object sender, EventArgs e)
         {
-            this.groupBoxRTShow.Visible = false;
-            this.groupBoxRTCargaMotivo.Visible = true;
+            if (dgw_Turnos.CurrentRow != null)
+            {
+                this.groupBoxRTShow.Visible = false;
+                this.groupBoxRTCargaMotivo.Visible = true;
+            }
+            else
+                MessageBox.Show("No se seleccionó NADA.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            //saber cuando cambie el valor, deba cargar la grilla con los turnos de esa fecha
+            //saber cuando cambie el valor, deba
+            //cargar la grilla con los turnos de esa fecha
         }
 
         private void btn_Confirmar_Click(object sender, EventArgs e)
         {
-            if (this.chk_email.Checked || this.chk_wpp.Checked)
+            if (this.txt_RazonIngreso.Text.Trim() == "")
             {
-                string msg = "Se ha informado vía ";
-                if (chk_wpp.Checked)
-                    msg += "WhatsApp ";
-                if (chk_email.Checked)
-                    msg += "Email ";
-                MessageBox.Show(msg, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (dgw_Turnos.CurrentRow != null)
+                    if (this.chk_email.Checked || this.chk_wpp.Checked)
+                    {
+                        string msg = "Se ha informado vía ";
+                        if (chk_wpp.Checked)
+                            msg += "WhatsApp ";
+                        if (chk_email.Checked)
+                            msg += "Email ";
+                        MessageBox.Show(msg, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Seleccione el medio de informacion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                else
+                    MessageBox.Show("No se seleccionó NADA.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
+                MessageBox.Show("No se cargó el Motivo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void groupBoxRTCargaMotivo_Enter(object sender, EventArgs e)
+        {
+            this.lbl_tipoRt.Text = dgw_RTDisponibles.Rows[0].Cells[1].ToString();
+            this.lbl_numRt.Text = dgw_RTDisponibles.Rows[0].Cells[2].ToString();
+            this.lbl_marcaRt.Text = dgw_RTDisponibles.Rows[0].Cells[3].ToString();
+            this.lbl_modeloRt.Text = dgw_RTDisponibles.Rows[0].Cells[4].ToString();
+        }
+
+        public void MostrarRTASeleccionar(List<string[]> infoRts)
+        {
+            dgw_RTDisponibles.DataSource = null;
+            dgw_RTDisponibles.Columns.Add("tipoRT", "Tipo RT");
+            dgw_RTDisponibles.Columns.Add("numeroRT", "N° RT");
+            dgw_RTDisponibles.Columns.Add("marcaRT", "Marca");
+            dgw_RTDisponibles.Columns.Add("modeloRT", "Modelo");
+
+            for (int fila = 0; fila < infoRts.Count; fila++)
             {
-                MessageBox.Show("Seleccione el medio de informacion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dgw_RTDisponibles.Rows.Add();
             }
+            
         }
     }
 }
