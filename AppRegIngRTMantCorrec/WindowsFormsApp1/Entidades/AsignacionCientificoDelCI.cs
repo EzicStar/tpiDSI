@@ -5,14 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp1.Entidades
+namespace AplicacionPPAI.Models
 {
     public class AsignacionCientificoDelCI
     {
-        DateTime fechaHoraDesde { get; set; }
-        DateTime fechaHoraHasta { get; set; }
-        PersonalCientifico personalCientifico { get; set; }
-        List<Turno> turnos { get; set; }
+        private DateTime fechaHoraDesde;
+        private DateTime fechaHoraHasta;
+        private PersonalCientifico personalCientifico;
+        private List<Turno> turnos;
+
         public AsignacionCientificoDelCI(DateTime fechaHoraDesde, DateTime fechaHoraHasta, PersonalCientifico personalCientifico, List<Turno> turnos)
         {
             this.fechaHoraDesde = fechaHoraDesde;

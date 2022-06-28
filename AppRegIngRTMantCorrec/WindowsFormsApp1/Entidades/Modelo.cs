@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp1.Entidades
+namespace AplicacionPPAI.Models
 {
     public class Modelo 
     {
-        string nombre { get; set; }
+        private string nombre;
 
-        public Modelo()
+       public Modelo(string nombre)
         {
             this.nombre = nombre;
         }

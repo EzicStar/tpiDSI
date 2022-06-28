@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp1.Entidades
+namespace AplicacionPPAI.Models
 {
     public class Marca
     {
-        string nombre { get; set; }
-        List<Modelo> modelos { get; set; }
+        private string nombre;
+        private List<Modelo> modelos;
 
         public Marca(string nombre, List<Modelo> modelos)
         {

@@ -7,14 +7,14 @@ namespace AplicacionPPAI.Models
 {
     public class PersonalCientifico
     {
-        int legajo { get; set; }
-        string nombre { get; set; }
-        string apellido { get; set; }
-        int nroDocumento { get; set; }
-        string correoInsti { get; set; }
-        string correoPersonal { get; set; }
-        int telefono { get; set; }
-        public Usuario usuario { get; set; }
+        private int legajo;
+        private string nombre;
+        private string apellido;
+        private int nroDocumento;
+        private string correoInsti;
+        private string correoPersonal;
+        private int telefono;
+        private Usuario usuario;
         public PersonalCientifico(int legajo, string nombre, string apellido, int nroDocumento, string correoInsti, string correoPersonal, int telefono, Usuario usuario)
         {
             this.legajo = legajo;
