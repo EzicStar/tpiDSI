@@ -56,5 +56,22 @@ namespace WindowsFormsApp1
         {
             //saber cuando cambie el valor, deba cargar la grilla con los turnos de esa fecha
         }
+
+        private void btn_Confirmar_Click(object sender, EventArgs e)
+        {
+            if (this.chk_email.Checked || this.chk_wpp.Checked)
+            {
+                string msg = "Se ha informado vía ";
+                if (chk_wpp.Checked)
+                    msg += "WhatsApp ";
+                if (chk_email.Checked)
+                    msg += "Email ";
+                MessageBox.Show(msg, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Seleccione el medio de informacion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

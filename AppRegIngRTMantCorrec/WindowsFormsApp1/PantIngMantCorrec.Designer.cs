@@ -56,6 +56,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_RazonIngreso = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.chk_wpp = new System.Windows.Forms.CheckBox();
+            this.chk_email = new System.Windows.Forms.CheckBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelTitle.SuspendLayout();
             this.groupBoxRTShow.SuspendLayout();
@@ -301,6 +305,10 @@
             this.groupBoxRTCargaMotivo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxRTCargaMotivo.Controls.Add(this.label9);
+            this.groupBoxRTCargaMotivo.Controls.Add(this.chk_email);
+            this.groupBoxRTCargaMotivo.Controls.Add(this.chk_wpp);
+            this.groupBoxRTCargaMotivo.Controls.Add(this.label8);
             this.groupBoxRTCargaMotivo.Controls.Add(this.button1);
             this.groupBoxRTCargaMotivo.Controls.Add(this.btn_Confirmar);
             this.groupBoxRTCargaMotivo.Controls.Add(this.dataGridView1);
@@ -344,6 +352,7 @@
             this.btn_Confirmar.TabIndex = 10;
             this.btn_Confirmar.Text = "Confirmar";
             this.btn_Confirmar.UseVisualStyleBackColor = false;
+            this.btn_Confirmar.Click += new System.EventHandler(this.btn_Confirmar_Click);
             // 
             // dataGridView1
             // 
@@ -353,17 +362,17 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 176);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 134);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(558, 212);
+            this.dataGridView1.Size = new System.Drawing.Size(558, 167);
             this.dataGridView1.TabIndex = 9;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 129);
+            this.label7.Location = new System.Drawing.Point(16, 87);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(105, 13);
             this.label7.TabIndex = 8;
@@ -372,7 +381,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 97);
+            this.label6.Location = new System.Drawing.Point(16, 55);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(92, 13);
             this.label6.TabIndex = 7;
@@ -382,7 +391,7 @@
             // 
             this.dtp_fechaFinPrevista.CustomFormat = "dd MMMM yyyy";
             this.dtp_fechaFinPrevista.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_fechaFinPrevista.Location = new System.Drawing.Point(141, 125);
+            this.dtp_fechaFinPrevista.Location = new System.Drawing.Point(141, 83);
             this.dtp_fechaFinPrevista.Name = "dtp_fechaFinPrevista";
             this.dtp_fechaFinPrevista.Size = new System.Drawing.Size(156, 20);
             this.dtp_fechaFinPrevista.TabIndex = 6;
@@ -433,10 +442,51 @@
             // 
             // txt_RazonIngreso
             // 
-            this.txt_RazonIngreso.Location = new System.Drawing.Point(141, 94);
+            this.txt_RazonIngreso.Location = new System.Drawing.Point(141, 52);
             this.txt_RazonIngreso.Name = "txt_RazonIngreso";
             this.txt_RazonIngreso.Size = new System.Drawing.Size(156, 20);
             this.txt_RazonIngreso.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(35, 315);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(69, 13);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Notificar Vía:";
+            // 
+            // chk_wpp
+            // 
+            this.chk_wpp.AutoSize = true;
+            this.chk_wpp.Location = new System.Drawing.Point(52, 334);
+            this.chk_wpp.Name = "chk_wpp";
+            this.chk_wpp.Size = new System.Drawing.Size(79, 17);
+            this.chk_wpp.TabIndex = 13;
+            this.chk_wpp.Text = "Whats App";
+            this.chk_wpp.UseVisualStyleBackColor = true;
+            // 
+            // chk_email
+            // 
+            this.chk_email.AutoSize = true;
+            this.chk_email.Location = new System.Drawing.Point(52, 357);
+            this.chk_email.Name = "chk_email";
+            this.chk_email.Size = new System.Drawing.Size(51, 17);
+            this.chk_email.TabIndex = 14;
+            this.chk_email.Text = "Email";
+            this.chk_email.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(21, 315);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(13, 17);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "*";
             // 
             // PantIngMantCorrec
             // 
@@ -494,6 +544,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_RazonIngreso;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox chk_email;
+        private System.Windows.Forms.CheckBox chk_wpp;
+        private System.Windows.Forms.Label label8;
     }
 }
 
