@@ -22,10 +22,10 @@ namespace AplicacionPPAI.Models
             this.recursosTecnologicos = recursosTecnologicos;
         }
 
-        public bool esVigente()
+        // verifica si la asignacion es la mas reciente, es decir no tiene fecha hasta
+        public bool EsVigente()
         {
-            DateTime fechaActual = DateTime.Now;
-            if ((fechaActual >= fechaHoraDesde) && (fechaActual <= fechaHoraHasta))
+            if (fechaHoraHasta != null)
             {
                 return true;
             }
@@ -34,11 +34,23 @@ namespace AplicacionPPAI.Models
                 return false;
             }
         }
-        public bool EsUsuarioLogueadoYVigente()
+
+        // devuelve true si el cientifico es el mismo que el pasado por parametro y la asignacion
+        // sigue vigente
+        public bool EsUsuarioLogueadoYVigente(PersonalCientifico cientifAComparar)
         {
-            return personalCientifico.TengoUsuarioHabilitado();
+            if(personalCientifico.Equals(cientifAComparar) && EsVigente() == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
-        public List<RecursoTecnologico> misRTDisponibles()
+
+        // lista los recursos tecnologicos que tiene a cargo el responsable tecnico
+        public List<RecursoTecnologico> MisRTDisponibles()
         {
             List<RecursoTecnologico> recursosDisponibles = new List<RecursoTecnologico>();
             foreach (RecursoTecnologico recurso in recursosTecnologicos)
