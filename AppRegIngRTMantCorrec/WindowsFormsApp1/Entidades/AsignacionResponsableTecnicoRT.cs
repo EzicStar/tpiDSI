@@ -55,7 +55,7 @@ namespace AplicacionPPAI.Models
             List<RecursoTecnologico> recursosDisponibles = new List<RecursoTecnologico>();
             foreach (RecursoTecnologico recurso in recursosTecnologicos)
             {
-                if (recurso.esDisponible())
+                if (recurso.EstaDisponible())
                 {
                     recursosDisponibles.Add(recurso);
                 }
