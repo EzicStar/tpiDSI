@@ -25,7 +25,7 @@ namespace AplicacionPPAI.Models
         // verifica si la asignacion es la mas reciente, es decir no tiene fecha hasta
         public bool EsVigente()
         {
-            if (fechaHoraHasta != null)
+            if (fechaHoraHasta == null)
             {
                 return true;
             }
@@ -50,12 +50,14 @@ namespace AplicacionPPAI.Models
         }
 
         // lista los recursos tecnologicos que tiene a cargo el responsable tecnico
+        // a diferencia del diagrama de secuencia, aca retornamos los objetos tipo RT en vez
+        // de una cadena de strings para que el rt pueda manipular despues el seleccionado
         public List<RecursoTecnologico> MisRTDisponibles()
         {
             List<RecursoTecnologico> recursosDisponibles = new List<RecursoTecnologico>();
             foreach (RecursoTecnologico recurso in recursosTecnologicos)
             {
-                if (recurso.esDisponible())
+                if (recurso.EstaDisponible())
                 {
                     recursosDisponibles.Add(recurso);
                 }

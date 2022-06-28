@@ -7,11 +7,11 @@ namespace AplicacionPPAI.Models
 {
     public class TipoRT
     {
-        private string nombre;
+        public string Nombre { get; set; }
         private string descripcion;
         public TipoRT(string nombre, string descripcion)
         {
-            this.nombre = nombre;
+            this.Nombre = nombre;
             this.descripcion = descripcion;
         }
     }

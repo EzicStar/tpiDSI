@@ -79,9 +79,5 @@ namespace AplicacionPPAI.Models
             }
             return false;
         }
-        public void Finalizar()
-        {
-            this.nombre = "Finalizado";
-        }
     }
 }

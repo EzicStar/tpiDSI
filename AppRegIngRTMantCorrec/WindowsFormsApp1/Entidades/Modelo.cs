@@ -9,15 +9,17 @@ namespace AplicacionPPAI.Models
     public class Modelo 
     {
         private string nombre;
+        private Marca marca;
 
-       public Modelo(string nombre)
+       public Modelo(string nombre, Marca marca)
         {
             this.nombre = nombre;
+            this.marca = marca;
         }
-        public (string, string) MostrarModeloYMarca(Marca marca)
+        public string[] MostrarModeloYMarca()
         {
-            string nombreMarca = marca.MostrarMarca();
-            return (this.nombre, nombreMarca);
+            string[] modeloYMarca = { nombre, marca.MostrarMarca() };
+            return modeloYMarca;
         }
     }
 }

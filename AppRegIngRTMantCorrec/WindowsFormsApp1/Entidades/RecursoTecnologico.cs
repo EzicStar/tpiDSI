@@ -18,7 +18,8 @@ namespace AplicacionPPAI.Models
         private List<Mantenimiento> mantenimientos;
         private List<CambioEstadoRT> cambioEstadoRT;
         private List<Turno> turnos;  
-         public RecursoTecnologico(int nroRT, DateTime fechaAlta, string imagenes, int perioricidadMantPrev, int duracionMantPrev, string fraccionHorarioTurno, TipoRT tipoRT, Modelo modelo, List<Mantenimiento> mantenimientos, List<CambioEstadoRT> cambioEstadoRT, List<Turno> turnos)
+
+        public RecursoTecnologico(int nroRT, DateTime fechaAlta, string imagenes, int perioricidadMantPrev, int duracionMantPrev, string fraccionHorarioTurno, TipoRT tipoRT, Modelo modelo, List<Mantenimiento> mantenimientos, List<CambioEstadoRT> cambioEstadoRT, List<Turno> turnos)
         {
             this.nroRT = nroRT;
             this.fechaAlta = fechaAlta;
@@ -32,7 +33,8 @@ namespace AplicacionPPAI.Models
             this.cambioEstadoRT = cambioEstadoRT;
             this.turnos = turnos;
         }
-        public bool esDisponible()
+
+        public bool EstaDisponible()
         {
             foreach (CambioEstadoRT cambioestado in cambioEstadoRT)
             {
@@ -43,6 +45,7 @@ namespace AplicacionPPAI.Models
             }
             return false;
         } 
+
         public void EnMantenimientoCorrectivo(Estado estado, DateTime fechaInicio, DateTime fechaHasta, string motivo)
         {
             foreach(Turno turno in turnos)
@@ -54,6 +57,22 @@ namespace AplicacionPPAI.Models
             }
             var mantenimientoNew = new Mantenimiento(fechaInicio, fechaHasta, motivo);
             mantenimientos.Add(mantenimientoNew);
+        }
+
+        public string MostrarTipoRT()
+        {
+            return tipoRT.Nombre;
+        }
+
+        // devuelve un array con los datos del recurso tecnologico
+        public string[] MostrarRT()
+        {
+            string[] datos = { MostrarTipoRT(),
+                               nroRT.ToString(),
+                               modelo.MostrarModeloYMarca()[0],
+                               modelo.MostrarModeloYMarca()[1] };
+            // mostrar modelo y marca retorna un array, por lo que usamos indices para obtener cada uno
+            return datos;
         }
     }
 }
