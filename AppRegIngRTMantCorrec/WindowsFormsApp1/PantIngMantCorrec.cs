@@ -21,5 +21,11 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            AplicacionPPAI.Controladores.ControladorIngresoMantCorrectivo controlador = new AplicacionPPAI.Controladores.ControladorIngresoMantCorrectivo();
+            controlador.RegIngRTMantCorrec();
+        }
     }
 }

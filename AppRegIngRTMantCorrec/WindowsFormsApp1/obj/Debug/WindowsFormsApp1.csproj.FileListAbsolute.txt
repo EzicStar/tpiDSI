@@ -22,3 +22,16 @@ C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacio
 C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacion\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.ValueTuple.dll
 C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacion\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.ValueTuple.xml
 C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacion\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.ValueTuple.dll
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.ValueTuple.xml
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PantIngMantCorrec.resources
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

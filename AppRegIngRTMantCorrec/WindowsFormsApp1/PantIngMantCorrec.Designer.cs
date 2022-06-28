@@ -39,6 +39,7 @@
             this.panelLogin = new System.Windows.Forms.Panel();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelTitle.SuspendLayout();
             this.SuspendLayout();
@@ -190,12 +191,23 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "HOME";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(439, 270);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // PantIngMantCorrec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(789, 552);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelMenu);
             this.Name = "PantIngMantCorrec";
@@ -220,6 +232,7 @@
         private System.Windows.Forms.Button btnExtPlazo;
         private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

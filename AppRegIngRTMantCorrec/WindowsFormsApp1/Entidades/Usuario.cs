@@ -7,14 +7,17 @@ namespace AplicacionPPAI.Models
 {
     public class Usuario
     {
-        string usuario { get; set; }
-        int clave { get; set; }
-        bool habilitado { get; set; }
-        public Usuario(string usuario, int clave, bool habilitado)
+        private string usuario;
+        private string clave;
+        private bool habilitado;
+        private PersonalCientifico personal;
+        
+        public Usuario(string usuario, string clave, bool habilitado, PersonalCientifico personal)
         {
             this.usuario = usuario;
             this.clave = clave;
             this.habilitado = habilitado;
+            this.personal = personal;
         }
         public bool EsHabilitado()
         {
@@ -27,9 +30,10 @@ namespace AplicacionPPAI.Models
                 return false;
             }
         }
-        public PersonalCientifico GetPersonaCientifico()
+
+        public PersonalCientifico GetPersonalCientifico()
         {
-            return 
+            return personal;
         }
     }
 }
