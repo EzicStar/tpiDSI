@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controladores\ControladorIngresoMantCorrectivo.cs" />
+    <Compile Include="Controladores\InterfazCorreoElectronico.cs" />
     <Compile Include="Entidades\AsignacionCientificoDelCI.cs" />
     <Compile Include="Entidades\AsignacionResponsableTecnicoRT.cs" />
     <Compile Include="Entidades\CambioEstadoRT.cs" />
@@ -102,8 +103,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Boundary\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

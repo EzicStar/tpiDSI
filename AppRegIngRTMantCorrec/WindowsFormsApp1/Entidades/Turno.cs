@@ -24,11 +24,17 @@ namespace AplicacionPPAI.Models
             this.cambioEstadoTurno = cambioEstadoTurno;
             this.asigCientifico = asigCientifico;
         }
-        public void CancelarPorMantenimientoCorrectivo(Estado estado)
+        public void CancelarPorMantenimientoCorrectivo(Estado estado, DateTime fechaActual)
         {
-            var cambioTurnoNew = new CambioEstadoTurno(DateTime.Now, DateTime.MaxValue, estado);
+            foreach (CambioEstadoTurno cambioEstado in cambioEstadoTurno)
+            {
+                if (cambioEstado.EsVigente() && cambioEstado.EsReservadoOPteReserva())
+                {
+                    cambioEstado.Finalizar(fechaActual);
+                }
+            }
+            var cambioTurnoNew = new CambioEstadoTurno(fechaActual, null, estado);
             cambioEstadoTurno.Add(cambioTurnoNew);
-            cambioTurnoNew.Finalizar();
         }
         public bool EsEnPeriodo(DateTime fechaHasta)
         {

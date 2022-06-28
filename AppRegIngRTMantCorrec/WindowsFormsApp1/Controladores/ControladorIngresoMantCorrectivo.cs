@@ -17,6 +17,9 @@ namespace AplicacionPPAI.Models
         DateTime fechaFinPrevista;
         string tipoNotif;
         Estado[] estados;
+        Estado cancelado;
+        Estado conIngEnMantCorrec;
+        List<string> mailsCientificos;
 
         // registrar ingreso de rt en mantenimiento correctivo
         public void RegIngRTMantCorrec(PantIngMantCorrec interfaz)
@@ -58,7 +61,9 @@ namespace AplicacionPPAI.Models
             List<string[]> infoTurnos = new List<string[]>();
             foreach (Turno turno in turnosOrdenados)
             {
-                infoTurnos.Add(turno.MostrarTurno());
+                string[] infoTurno = turno.MostrarTurno();
+                infoTurnos.Add(infoTurno);
+                mailsCientificos.Add(infoTurno[6]);
             }
 
             interfaz.MostrarTurnosResAfect(infoTurnos); // tmb solicita confirmacion y tipo de notificacion
@@ -67,11 +72,24 @@ namespace AplicacionPPAI.Models
         public void ConfirmacionIngresada(bool mail, bool wpp)
         {
             //aca empieza la creacion del mantenimiento
-            estados = FakeData.estados;
+            estados = FakeData.Listaestados;
             foreach (Estado estado in estados)
             {
-                EsAmbitoTurno();
-                estado.EsAmbitoTurno();
+                if (estado.EsAmbitoTurno() && estado.EsCancelado())
+                {
+                    cancelado = estado;
+                }
+
+                else if (estado.EsAmbitoRT() && estado.EsConMantenimientoCorrectivo())
+                {
+                    conIngEnMantCorrec = estado;
+                }
+
+                rtSeleccionado.EnMantenimientoCorrectivo(cancelado, conIngEnMantCorrec, DateTime.Now, fechaFinPrevista, razonMantenimiento);
+
+                InterfazCorreoElectronico gestorCorreo = new InterfazCorreoElectronico();
+                string mensajeMail = "Su turno ha sido cancelado por mantenimiento correctivo, disculpe las molestias";
+                gestorCorreo.GenerarMailPorMantenimientoCorrectivo(mailsCientificos, mensajeMail);
             }
         }
 

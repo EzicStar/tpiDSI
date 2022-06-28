@@ -44,10 +44,9 @@ namespace AplicacionPPAI.Models
             }
             return false;
         }
-        public void Finalizar(Estado estado)
+        public void Finalizar(DateTime fechaActual)
         {
-            this.fechaHoraHasta = DateTime.Now;
-            this.estado = estado;
+            this.fechaHoraHasta = fechaActual;
         }
     }
 }

@@ -46,17 +46,27 @@ namespace AplicacionPPAI.Models
             return false;
         }
 
-        public void EnMantenimientoCorrectivo(Estado estado, DateTime fechaInicio, DateTime fechaHasta, string motivo)
+        public void EnMantenimientoCorrectivo(Estado estadoCancelado, Estado enMantCorrec, DateTime fechaInicio, DateTime fechaHasta, string motivo)
         {
             foreach (Turno turno in turnos)
             {
                 if (turno.EsEnPeriodo(fechaHasta))
                 {
-                    turno.CancelarPorMantenimientoCorrectivo(estado);
+                    turno.CancelarPorMantenimientoCorrectivo(estadoCancelado, fechaInicio);
                 }
             }
             var mantenimientoNew = new Mantenimiento(fechaInicio, fechaHasta, motivo);
             mantenimientos.Add(mantenimientoNew);
+
+           foreach (CambioEstadoRT cambioEstado in cambioEstadoRT)
+            {
+                if (cambioEstado.EsVigente())
+                {
+                    cambioEstado.Finalizar(fechaInicio);
+                }
+            }
+
+            cambioEstadoRT.Add(new CambioEstadoRT(fechaInicio, null, enMantCorrec));
         }
 
         public string MostrarTipoRT()

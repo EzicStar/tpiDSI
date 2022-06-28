@@ -16,9 +16,9 @@ namespace AplicacionPPAI.Models
             this.fechaHoraHasta = fechaHoraHasta;
             this.estado = estado;
         }
-        public void Finalizar()
+        public void Finalizar(DateTime fechaActual)
         {
-            return;
+            fechaHoraHasta = fechaActual;
         }
         public bool EsVigente()
         {

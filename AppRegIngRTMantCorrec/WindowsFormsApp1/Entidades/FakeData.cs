@@ -21,7 +21,6 @@ namespace AplicacionPPAI.Models
         // ASIGNACION CIENTIFICO DEL CI
         public static AsignacionCientificoDelCI AsignacionC1 { get; set; } = new AsignacionCientificoDelCI(new DateTime(), null, Cientifico1, TurnosRT1);
         public static AsignacionCientificoDelCI AsignacionC2 { get; set; } = new AsignacionCientificoDelCI(new DateTime(), null, Cientifico2, TurnosRT2);
-
         public static AsignacionCientificoDelCI AsignacionC3 { get; set; } = new AsignacionCientificoDelCI(new DateTime(), null, Cientifico3, TurnosRT2);
 
         //USUARIOS
@@ -81,45 +80,48 @@ namespace AplicacionPPAI.Models
         public static Estado FinalizadoTurno { get; set; } = new Estado("Finalizado", "Turno", true, true, "desc");
 
         //LISTA DE TODOS LOS ESTADOS 
-        public static Estado[] estados = { Disponible, Habilitado, DeBaja, EnMantPreventivo, EnMantCorrectivo, DisponibleTurno, ReservadoTurno, GeneradoTurno, CanceladoTurno, EnAnalisisTurno, FinSinUsoTurno, AnuladoTurno, FinalizadoTurno };
+        public static Estado[] Listaestados = { DisponibleTurno, HabilitadoRT, DeBajaRT, EnMantPreventivoRT, EnMantCorrectivoRT, DisponibleTurno, ReservadoTurno, GeneradoTurno, CanceladoTurno, EnAnalisisTurno, FinSinUsoTurno, AnuladoTurno, FinalizadoTurno };
 
         //CAMBIOS ESTADOS
         //CAMBIO ESTADO RT
-        public static CambioEstadoRT CambioEstadoRT1 { get; set; } = new CambioEstadoRT(new DateTime(), null, DisponibleRT);
-        public static CambioEstadoRT CambioEstadoRT2 { get; set; } = new CambioEstadoRT(new DateTime(), new DateTime(), HabilitadoRT);
-        public static CambioEstadoRT CambioEstadoRT3 { get; set; } = new CambioEstadoRT(new DateTime(), null, DisponibleRT);
-        public static CambioEstadoRT CambioEstadoRT4 { get; set; } = new CambioEstadoRT(new DateTime(), new DateTime(), EnMantCorrectivoRT);
-        public static CambioEstadoRT CambioEstadoRT5 { get; set; } = new CambioEstadoRT(new DateTime(), new DateTime(), EnMantPreventivoRT);
+        public static CambioEstadoRT CambioEstadoRT1 { get; set; } = new CambioEstadoRT(new DateTime(2022, 6, 27), null, DisponibleRT);
+        public static CambioEstadoRT CambioEstadoRT2 { get; set; } = new CambioEstadoRT(new DateTime(2022, 6, 27), new DateTime(2022, 6, 27), HabilitadoRT);
+        public static CambioEstadoRT CambioEstadoRT4 { get; set; } = new CambioEstadoRT(new DateTime(2022, 6, 27), new DateTime(2022, 6, 27), EnMantCorrectivoRT);
+        public static CambioEstadoRT CambioEstadoRT5 { get; set; } = new CambioEstadoRT(new DateTime(2022, 6, 27), new DateTime(2022, 6, 27), EnMantPreventivoRT);
         //CAMBIO ESTADO TURNO
-        public static CambioEstadoTurno cambioEstadoT1 { get; set; } = new CambioEstadoTurno(new DateTime(), null,
-            DisponibleTurno);
-        public static CambioEstadoTurno cambioEstadoT2 { get; set; } = new CambioEstadoTurno(new DateTime(), new DateTime(),
+        public static CambioEstadoTurno cambioEstadoT1 { get; set; } = new CambioEstadoTurno(new DateTime(2022, 6, 27),
+            new DateTime(2022, 6, 27), DisponibleTurno);
+        public static CambioEstadoTurno cambioEstadoT2 { get; set; } = new CambioEstadoTurno(new DateTime(2022, 6, 27), null,
             ReservadoTurno);
-        public static CambioEstadoTurno cambioEstadoT3 { get; set; } = new CambioEstadoTurno(new DateTime(), new DateTime(),
+        public static CambioEstadoTurno cambioEstadoT3 { get; set; } = new CambioEstadoTurno(new DateTime(2022, 6, 27), new DateTime(2022, 6, 27),
             GeneradoTurno);
-        public static CambioEstadoTurno cambioEstadoT4 { get; set; } = new CambioEstadoTurno(new DateTime(), new DateTime(),
+        public static CambioEstadoTurno cambioEstadoT4 { get; set; } = new CambioEstadoTurno(new DateTime(2022, 6, 27), new DateTime(2022, 6, 27),
             CanceladoTurno);
-        public static CambioEstadoTurno cambioEstadoT5 { get; set; } = new CambioEstadoTurno(new DateTime(), new DateTime(),
+        public static CambioEstadoTurno cambioEstadoT5 { get; set; } = new CambioEstadoTurno(new DateTime(2022, 6, 27), new DateTime(),
           EnAnalisisTurno);
-        public static CambioEstadoTurno cambioEstadoT6 { get; set; } = new CambioEstadoTurno(new DateTime(), new DateTime(),
+        public static CambioEstadoTurno cambioEstadoT6 { get; set; } = new CambioEstadoTurno(new DateTime(2022, 6, 27), new DateTime(),
         FinSinUsoTurno);
-        public static CambioEstadoTurno cambioEstadoT7 { get; set; } = new CambioEstadoTurno(new DateTime(), new DateTime(),
+        public static CambioEstadoTurno cambioEstadoT7 { get; set; } = new CambioEstadoTurno(new DateTime(2022, 6, 27), new DateTime(),
         AnuladoTurno);
-        public static CambioEstadoTurno cambioEstadoT8 { get; set; } = new CambioEstadoTurno(new DateTime(), new DateTime(),
+        public static CambioEstadoTurno cambioEstadoT8 { get; set; } = new CambioEstadoTurno(new DateTime(2022, 6, 27), new DateTime(),
         FinalizadoTurno);
+        public static CambioEstadoTurno cambioEstadoT9 { get; set; } = new CambioEstadoTurno(new DateTime(2022, 6, 27), null,
+        EnAnalisisTurno);
 
 
-        //LISTA DE CAMBIO ESTADO
+        //LISTA DE CAMBIO ESTADO RT
         static List<CambioEstadoRT> cambioEstadoRTsRec1 = new List<CambioEstadoRT> { CambioEstadoRT1, CambioEstadoRT2, CambioEstadoRT4 };
-        static List<CambioEstadoRT> cambioEstadoRTsRec2 = new List<CambioEstadoRT> { CambioEstadoRT3, CambioEstadoRT2 };
-        static List<CambioEstadoRT> cambioEstadoRTsRec3 = new List<CambioEstadoRT> { CambioEstadoRT1, CambioEstadoRT3, CambioEstadoRT5 };
+        static List<CambioEstadoRT> cambioEstadoRTsRec2 = new List<CambioEstadoRT> { CambioEstadoRT1, CambioEstadoRT4 };
+        static List<CambioEstadoRT> cambioEstadoRTsRec3 = new List<CambioEstadoRT> { CambioEstadoRT1, CambioEstadoRT4, CambioEstadoRT5 };
+
+        //CAMBIO ESTADO TURNO
         static List<CambioEstadoTurno> cambioEstadoTurno1 = new List<CambioEstadoTurno> { cambioEstadoT1, cambioEstadoT2 };
-        static List<CambioEstadoTurno> cambioEstadoTurno2 = new List<CambioEstadoTurno> { cambioEstadoT2, cambioEstadoT3, cambioEstadoT4 };
+        static List<CambioEstadoTurno> cambioEstadoTurno2 = new List<CambioEstadoTurno> { cambioEstadoT9, cambioEstadoT3, cambioEstadoT4 };
         static List<CambioEstadoTurno> cambioEstadoTurno3 = new List<CambioEstadoTurno> { cambioEstadoT1, cambioEstadoT6, cambioEstadoT7 };
         //TURNOS  todo: añadir datos con fecha posible!!!! gracias
-        public static Turno Turno1 { get; set; } = new Turno(12, new DateTime(), 3, new DateTime(), new DateTime(), cambioEstadoTurno1, AsignacionC1);
-        public static Turno Turno2 { get; set; } = new Turno(22, new DateTime(), 4, new DateTime(), new DateTime(), cambioEstadoTurno2, AsignacionC1);
-        public static Turno Turno3 { get; set; } = new Turno(4, new DateTime(), 3, new DateTime(), new DateTime(), cambioEstadoTurno1, AsignacionC3);
+        public static Turno Turno1 { get; set; } = new Turno(12, new DateTime(2022, 6, 29), 3, new DateTime(2022, 6, 7), new DateTime(2022, 6, 29), cambioEstadoTurno1, AsignacionC2);
+        public static Turno Turno2 { get; set; } = new Turno(22, new DateTime(2022, 6, 29), 4, new DateTime(2022, 6, 7), new DateTime(2022, 6, 29), cambioEstadoTurno2, AsignacionC3);
+        public static Turno Turno3 { get; set; } = new Turno(4, new DateTime(2022, 6, 30), 3, new DateTime(2022, 6, 4), new DateTime(2022, 6, 30), cambioEstadoTurno3, AsignacionC2);
 
         // LISTA DE TURNOS
         static List<Turno> TurnosRT1 = new List<Turno> { Turno1, Turno2 };
@@ -127,21 +129,21 @@ namespace AplicacionPPAI.Models
 
 
         //RECURSOS TECNOLOGICOS
-        public static RecursoTecnologico Rec1 { get; set; } = new RecursoTecnologico(12, new DateTime(), "hola.jpg", 12, 1, "nose",
-        TipoRT1, Modelo1, mantenimientosRec1, cambioEstadoRTsRec2, TurnosRT1);
+        public static RecursoTecnologico Rec1 { get; set; } = new RecursoTecnologico(12, new DateTime(2019, 5, 11), "hola.jpg", 12, 1, "nose",
+        TipoRT1, Modelo1, mantenimientosRec1, cambioEstadoRTsRec1, TurnosRT1);
 
-        public static RecursoTecnologico Rec2 { get; set; } = new RecursoTecnologico(32, new DateTime(), "pep.jpg", 32, 4, "nose",
-            TipoRT2, Modelo3, mantenimientosRec2, cambioEstadoRTsRec1, TurnosRT2);
+        public static RecursoTecnologico Rec2 { get; set; } = new RecursoTecnologico(32, new DateTime(2019, 5, 11), "pep.jpg", 32, 4, "nose",
+            TipoRT2, Modelo3, mantenimientosRec2, cambioEstadoRTsRec2, TurnosRT2);
 
         // LISTA DE RECURSOS TECNOLOGICOS
         static List<RecursoTecnologico> ListaRec1 { get; set; } = new List<RecursoTecnologico> { Rec1, Rec2 };
         static List<RecursoTecnologico> ListaRec2 { get; set; } = new List<RecursoTecnologico> { Rec2 };
 
         //ASIGNACIONES RESPONSABLES RT
-        public static AsignacionResponsableTecnicoRT AsignacionRT1Cient1 { get; set; } = new AsignacionResponsableTecnicoRT(new DateTime(),
+        public static AsignacionResponsableTecnicoRT AsignacionRT1Cient1 { get; set; } = new AsignacionResponsableTecnicoRT(new DateTime(2021, 7, 5),
             null, Cientifico1, ListaRec1);
 
-        public static AsignacionResponsableTecnicoRT AsignacionRT1Cient2 { get; set; } = new AsignacionResponsableTecnicoRT(new DateTime(),
+        public static AsignacionResponsableTecnicoRT AsignacionRT1Cient2 { get; set; } = new AsignacionResponsableTecnicoRT(new DateTime(2020, 4, 10),
            null, Cientifico2, ListaRec2);
 
         // LISTA ASIGNACIONES
