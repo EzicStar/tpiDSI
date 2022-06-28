@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace AplicacionPPAI.Models
 {
     public partial class PantIngMantCorrec : Form
     {
@@ -38,6 +38,9 @@ namespace WindowsFormsApp1
             this.groupBoxRTShow.Visible = true;
             this.btnMantCorrec.BackColor = Color.FromArgb(0, 135, 137);
             this.btnHome.BackColor = Color.FromArgb(50, 52, 77);
+
+            ControladorIngresoMantCorrectivo controlador = new ControladorIngresoMantCorrectivo();
+            controlador.RegIngRTMantCorrec(this);
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
@@ -95,6 +98,21 @@ namespace WindowsFormsApp1
             this.lbl_numRt.Text = dgw_RTDisponibles.Rows[0].Cells[2].ToString();
             this.lbl_marcaRt.Text = dgw_RTDisponibles.Rows[0].Cells[3].ToString();
             this.lbl_modeloRt.Text = dgw_RTDisponibles.Rows[0].Cells[4].ToString();
+        }
+
+        public void MostrarRTASeleccionar(List<string[]> infoRts)
+        {
+            dgw_RTDisponibles.DataSource = null;
+            dgw_RTDisponibles.Columns.Add("tipoRT", "Tipo RT");
+            dgw_RTDisponibles.Columns.Add("numeroRT", "N° RT");
+            dgw_RTDisponibles.Columns.Add("marcaRT", "Marca");
+            dgw_RTDisponibles.Columns.Add("modeloRT", "Modelo");
+
+            for (int fila = 0; fila < infoRts.Count; fila++)
+            {
+                dgw_RTDisponibles.Rows.Add();
+            }
+            
         }
     }
 }

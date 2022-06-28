@@ -23,7 +23,7 @@ namespace AplicacionPPAI.Models
         public static Sesion SesionActual { get; set; } = new Sesion(new DateTime(), null, UserCientifico1);
 
         //MODELOS
-        public static Modelo Modelo1 { get; set; } = new Modelo("Casio");
+        public static Modelo Modelo1 { get; set; } = new Modelo("Casio", new Marca("Kawai"));
 
         //TIPO RT
         public static TipoRT TipoRT1 { get; set; } = new TipoRT("Microscopio", "hace zoom");

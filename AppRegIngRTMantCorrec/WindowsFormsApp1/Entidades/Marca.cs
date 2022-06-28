@@ -10,7 +10,10 @@ namespace AplicacionPPAI.Models
     {
         private string nombre;
         private List<Modelo> modelos;
-
+        public Marca(string nombre)
+        {
+            this.nombre = nombre;
+        }
         public Marca(string nombre, List<Modelo> modelos)
         {
             this.nombre = nombre;
@@ -19,6 +22,7 @@ namespace AplicacionPPAI.Models
         public string MostrarMarca()
         {
             return this.nombre;
-        }
+        } 
+
     }
 }
