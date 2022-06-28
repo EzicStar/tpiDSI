@@ -7,9 +7,9 @@ namespace AplicacionPPAI.Models
 {
     public class CambioEstadoTurno
     {
-        DateTime fechaHoraDesde { get; set; }
-        DateTime fechaHoraHasta { get; set; }
-        Estado estado { get; set; }
+        private DateTime fechaHoraDesde;
+        private DateTime fechaHoraHasta;
+        private Estado estado;
         public CambioEstadoTurno(DateTime fechaHoraDesde, DateTime fechaHoraHasta, Estado estado)
         {
             this.fechaHoraDesde = fechaHoraDesde;

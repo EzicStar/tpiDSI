@@ -7,16 +7,19 @@ namespace AplicacionPPAI.Models
 {
     public class Estado
     {
-        string nombre { get; set; }
-        string ambito { get; set; }
-        bool esReservable { get; set; }
-        bool esCancelable { get; set; }
-        public Estado(string nombre, string ambito, bool esReservable, bool esCancelable)
+        private string nombre;
+        private string ambito;
+        private bool esReservable;
+        private bool esCancelable;
+        private string descripcion;
+
+        public Estado(string nombre, string ambito, bool esReservable, bool esCancelable, string descripcion)
         {
             this.nombre = nombre;
             this.ambito = ambito;
             this.esReservable = esReservable;
             this.esCancelable = esCancelable;
+            this.descripcion = descripcion;
         }
         public string MostrarEstado()
         {

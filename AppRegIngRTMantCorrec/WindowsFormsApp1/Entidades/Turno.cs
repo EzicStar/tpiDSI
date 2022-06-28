@@ -7,12 +7,12 @@ namespace AplicacionPPAI.Models
 {
     public class Turno
     {
-        int idTurno { get; set; }
-        DateTime fechaGeneracion { get; set; }
-        int diaSemana { get; set; }
-        DateTime fechaHoraInicio { get; set; }
-        DateTime fechaHoraFin { get; set; }
-        List<CambioEstadoTurno> cambioEstadoTurno { get; set; }
+        private int idTurno;
+        private DateTime fechaGeneracion;
+        private int diaSemana;
+        private DateTime fechaHoraInicio;
+        private DateTime fechaHoraFin;
+        private List<CambioEstadoTurno> cambioEstadoTurno;
         public Turno(int idTurno, DateTime fechaGeneracion, int diaSemana, DateTime fechaHoraInicio, DateTime fechaHoraFin, List<CambioEstadoTurno> cambioEstadoTurno)
         {
             this.idTurno = idTurno;
