@@ -27,7 +27,6 @@ E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsAp
 E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
 E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.ValueTuple.dll
 E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.ValueTuple.xml
-E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
 E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
 E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
 E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
@@ -48,3 +47,5 @@ G:\Facultad\3° año\DSI Diseño de Sistemas\PPAI Grupo X\WinFormsCU\tpiDSI\AppR
 G:\Facultad\3° año\DSI Diseño de Sistemas\PPAI Grupo X\WinFormsCU\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
 G:\Facultad\3° año\DSI Diseño de Sistemas\PPAI Grupo X\WinFormsCU\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\AplicacionPPAI.Models.PantIngMantCorrec.resources
 E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\AplicacionPPAI.Models.PantIngMantCorrec.resources
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
