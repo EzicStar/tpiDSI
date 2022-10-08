@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\AppRegIngRTMantCorrec"
+    "\\AppRegIngRTMantCorrec",
+    "\\AppRegIngRTMantCorrec\\WindowsFormsApp1",
+    "\\AppRegIngRTMantCorrec\\WindowsFormsApp1\\Entidades"
   ],
-  "SelectedNode": "\\AppRegIngRTMantCorrec\\AppRegIngRTMantCorrec.sln",
+  "SelectedNode": "\\AppRegIngRTMantCorrec\\WindowsFormsApp1\\Entidades\\FakeData.cs",
   "PreviewInSolutionExplorer": false
 }
