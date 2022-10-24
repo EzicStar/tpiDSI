@@ -13,7 +13,7 @@ namespace AplicacionPPAI.Models
                                                 43524643, "erniInst@gmail.com", "erni@gmail.com", 27842387, UserCientifico1);
 
         public static PersonalCientifico Cientifico2 { get; set; } = new PersonalCientifico(738147, "Germán", "Vélez",
-                                                43524643, "germanevelez@hotmail.com", "germanevelez@hotmail.com", 2894723, UserCientifico2);
+                                                43524643, "assadsaasd@hotmail.com", "germanevelez@hotmail.com", 2894723, UserCientifico2);
 
         public static PersonalCientifico Cientifico3 { get; set; } = new PersonalCientifico(80903, "Juan", "Perez",
                                                 717812, "juanInst@gmail.com", "pablo@gmail.com", 32534, UserCientifico3);

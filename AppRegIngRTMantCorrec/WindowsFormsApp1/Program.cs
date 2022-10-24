@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace WindowsFormsApp1
 {
@@ -18,6 +19,10 @@ namespace WindowsFormsApp1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new PantIngMantCorrec());
+            SQLiteConnection conn = BDConnection.CreateConnection();
+            //BDConnection.CreateTable(conn);
+            //BDConnection.InsertData(conn);
+            BDConnection.ReadData(conn);
         }
     }
 }

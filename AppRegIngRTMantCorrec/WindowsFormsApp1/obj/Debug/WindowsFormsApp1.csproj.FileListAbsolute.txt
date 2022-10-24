@@ -27,7 +27,6 @@ E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsAp
 E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
 E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.ValueTuple.dll
 E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.ValueTuple.xml
-E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
 E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
 E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
 E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
@@ -48,3 +47,27 @@ G:\Facultad\3° año\DSI Diseño de Sistemas\PPAI Grupo X\WinFormsCU\tpiDSI\AppR
 G:\Facultad\3° año\DSI Diseño de Sistemas\PPAI Grupo X\WinFormsCU\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
 G:\Facultad\3° año\DSI Diseño de Sistemas\PPAI Grupo X\WinFormsCU\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\AplicacionPPAI.Models.PantIngMantCorrec.resources
 E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\AplicacionPPAI.Models.PantIngMantCorrec.resources
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.ValueTuple.dll
+D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.ValueTuple.xml
+D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\AplicacionPPAI.Models.PantIngMantCorrec.resources
+D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\EntityFramework.dll
+D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.dll
+D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Data.SQLite.dll
+D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\EntityFramework.xml
+D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.xml
+D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Data.SQLite.xml
