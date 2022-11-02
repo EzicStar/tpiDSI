@@ -71,6 +71,7 @@ D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Data.SQ
 D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\EntityFramework.xml
 D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.xml
 D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Data.SQLite.xml
+<<<<<<< HEAD
 C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
 C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
 C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\AplicacionPPAI.Models.PantIngMantCorrec.resources
@@ -106,3 +107,13 @@ C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\
 C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.ValueTuple.xml
 C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+=======
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\EntityFramework.dll
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.dll
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Data.SQLite.dll
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Data.SQLite.EF6.dll
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Data.SQLite.Linq.dll
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\EntityFramework.xml
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.xml
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Data.SQLite.xml
+>>>>>>> c3927f0a1e01b8107a9aff1253814c73df3e1a27
