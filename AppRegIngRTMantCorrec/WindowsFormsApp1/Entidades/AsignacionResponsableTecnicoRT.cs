@@ -14,6 +14,9 @@ namespace AplicacionPPAI.Models
         private PersonalCientifico personalCientifico;
         private List<RecursoTecnologico> recursosTecnologicos;
 
+        public DateTime GetFechaHoraDesde() { return fechaHoraDesde; }
+        public int GetLegajo() { return personalCientifico.GetLegajo(); }
+
         public AsignacionResponsableTecnicoRT(DateTime fechaHoraDesde, DateTime? fechaHoraHasta, PersonalCientifico personalCientifico, List<RecursoTecnologico> recursosTecnologicos)
         {
             this.fechaHoraDesde = fechaHoraDesde;

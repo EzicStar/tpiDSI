@@ -7,19 +7,21 @@ namespace AplicacionPPAI.Models
 {
     public class RecursoTecnologico
     {
+        // CAMBIO fraccionHorarioTurno era un string
+
         private int nroRT;
         private DateTime fechaAlta;
         private string imagenes;
         private int perioricidadMantPrev;
         private int duracionMantPrev;
-        private string fraccionHorarioTurno;
+        private int fraccionHorarioTurno;
         private TipoRT tipoRT;
         private Modelo modelo;
         private List<Mantenimiento> mantenimientos;
         private List<CambioEstadoRT> cambioEstadoRT;
         private List<Turno> turnos;
 
-        public RecursoTecnologico(int nroRT, DateTime fechaAlta, string imagenes, int perioricidadMantPrev, int duracionMantPrev, string fraccionHorarioTurno, TipoRT tipoRT, Modelo modelo, List<Mantenimiento> mantenimientos, List<CambioEstadoRT> cambioEstadoRT, List<Turno> turnos)
+        public RecursoTecnologico(int nroRT, DateTime fechaAlta, string imagenes, int perioricidadMantPrev, int duracionMantPrev, int fraccionHorarioTurno, TipoRT tipoRT, Modelo modelo, List<Mantenimiento> mantenimientos, List<CambioEstadoRT> cambioEstadoRT, List<Turno> turnos)
         {
             this.nroRT = nroRT;
             this.fechaAlta = fechaAlta;
@@ -55,11 +57,13 @@ namespace AplicacionPPAI.Models
                     turno.CancelarPorMantenimientoCorrectivo(estadoCancelado, fechaInicio);
                 }
             }
+            // TODO aca desmaterializar el mantenimiento
             var mantenimientoNew = new Mantenimiento(fechaInicio, fechaHasta, motivo);
             mantenimientos.Add(mantenimientoNew);
 
            foreach (CambioEstadoRT cambioEstado in cambioEstadoRT)
             {
+                // TODO setea feche de inicio al cambio
                 if (cambioEstado.EsVigente())
                 {
                     cambioEstado.Finalizar(fechaInicio);
@@ -71,7 +75,7 @@ namespace AplicacionPPAI.Models
 
         public string MostrarTipoRT()
         {
-            return tipoRT.Nombre;
+            return tipoRT.GetNombre();
         }
 
         // devuelve un array con los datos del recurso tecnologico

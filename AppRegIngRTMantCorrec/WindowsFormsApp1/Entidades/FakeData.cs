@@ -8,17 +8,17 @@ namespace AplicacionPPAI.Models
 {
     public class FakeData
     {
-        // CIENTIFICOS
+        //CIENTIFICOS
         public static PersonalCientifico Cientifico1 { get; set; } = new PersonalCientifico(738734, "Ernesto", "Ambrosini",
-                                                43524643, "erniInst@gmail.com", "erni@gmail.com", 27842387, UserCientifico1);
+                                                43524643, "erniInst@gmail.com", "erni@gmail.com", 27842387, "usr1");
 
         public static PersonalCientifico Cientifico2 { get; set; } = new PersonalCientifico(738147, "Germán", "Vélez",
-                                                43524643, "assadsaasd@hotmail.com", "germanevelez@hotmail.com", 2894723, UserCientifico2);
+                                                43524643, "assadsaasd@hotmail.com", "germanevelez@hotmail.com", 2894723, "usr2");
 
         public static PersonalCientifico Cientifico3 { get; set; } = new PersonalCientifico(80903, "Juan", "Perez",
-                                                717812, "juanInst@gmail.com", "pablo@gmail.com", 32534, UserCientifico3);
+                                                717812, "juanInst@gmail.com", "pablo@gmail.com", 32534, "usr3");
         public static PersonalCientifico Cientifico4 { get; set; } = new PersonalCientifico(738734, "Ernesto", "Ambrosini",
-                                                43524643, "erniInst@gmail.com", "erni@gmail.com", 27842387, UserCientifico4);
+                                                43524643, "erniInst@gmail.com", "erni@gmail.com", 27842387, "usr4");
 
         // ASIGNACION CIENTIFICO DEL CI
         public static AsignacionCientificoDelCI AsignacionC1 { get; set; } = new AsignacionCientificoDelCI(new DateTime(), null, Cientifico1, TurnosRT1);
@@ -165,6 +165,6 @@ namespace AplicacionPPAI.Models
 
         // LISTA ASIGNACIONES
         public static List<AsignacionResponsableTecnicoRT> ListaAsignaciones { get; set; } = new List<AsignacionResponsableTecnicoRT>
-             { AsignacionRT1Cient1, AsignacionRT1Cient2};
+                     { AsignacionRT1Cient1, AsignacionRT1Cient2};
     }
 }

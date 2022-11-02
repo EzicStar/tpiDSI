@@ -25,6 +25,8 @@ namespace AplicacionPPAI.Models
         {
             return this.nombre;
         }
+
+        public string GetAmbito() { return this.ambito; }   
         public bool EsDisponible()
         {
             if (this.nombre == "Disponible")
@@ -73,7 +75,7 @@ namespace AplicacionPPAI.Models
         }
         public bool EsConMantenimientoCorrectivo()
         {
-            if (this.ambito == "EnMantenimientoCorrectivo")
+            if (this.nombre == "EnMantenimientoCorrectivo")
             {
                 return true;
             }

@@ -28,6 +28,7 @@ namespace AplicacionPPAI.Models
         {
             foreach (CambioEstadoTurno cambioEstado in cambioEstadoTurno)
             {
+                // TODO ponerle fecha al cambio estado actual y agregar el nuevo cambio estado
                 if (cambioEstado.EsVigente() && cambioEstado.EsReservadoOPteReserva())
                 {
                     cambioEstado.Finalizar(fechaActual);

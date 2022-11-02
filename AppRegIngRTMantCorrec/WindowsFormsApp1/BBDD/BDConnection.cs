@@ -4,61 +4,60 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
+using System.Data;
 
 namespace AplicacionPPAI.Models
 {
+    // TODO que nombre no sea public por favor
     public class BDConnection
     {
+        private static SQLiteConnection conn;
         public static SQLiteConnection CreateConnection()
         {
-            SQLiteConnection sqliteConn;
             // PONER EL PATH ABSOLUTO HACIA DONDE ESTA LA DB EN TU PC
-            String path = "D:\\Github\\tpiDSI\\AppRegIngRTMantCorrec\\WindowsFormsApp1\\BBDD\\PPAIDB.db";
-            sqliteConn = new SQLiteConnection("Datasource=" + path + ";Version=3;New=True;Compress=True;");
+            String path = "C:\\Users\\Franco\\Desktop\\tpiDSI\\AppRegIngRTMantCorrec\\WindowsFormsApp1\\BBDD\\PPAIDB.db";
+            conn = new SQLiteConnection("Datasource=" + path + ";Version=3;New=True;Compress=True;");
 
             try
             {
-                sqliteConn.Open();
+                conn.Open();
                 Console.WriteLine("HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
             }
             catch
             {
                 Console.WriteLine("NO ENTROOO");
             }
-            return sqliteConn;
+            return conn;
         }
-        public static void CreateTable(SQLiteConnection conn)
+        public static void CreateTable(string consulta)
         {
             SQLiteCommand sQLiteCommand;
-            String createSQL = "CREATE TABLE SAMPLETABLE(COL1 VARCHAR(28), COL2 INT)";
+            String createSQL = consulta;
             sQLiteCommand = conn.CreateCommand();
             sQLiteCommand.CommandText = createSQL;
             sQLiteCommand.ExecuteNonQuery();
         }
 
-        public static void InsertData(SQLiteConnection conn)
+        public static void InsertData(string consulta)
         {
             SQLiteCommand sQLiteCommand;
             sQLiteCommand = conn.CreateCommand();
-            sQLiteCommand.CommandText = "INSERT INTO SAMPLETABLE(COL1, COL2) VALUES ('Homero', 148);";
+            sQLiteCommand.CommandText = consulta;
             sQLiteCommand.ExecuteNonQuery();
         }
 
-        public static void ReadData(SQLiteConnection conn)
+        public static DataTable ReadData(string consulta)
         {
             SQLiteDataReader sqliteReader;
             SQLiteCommand sqliteCommand;
+            DataTable tabla = new DataTable();
             sqliteCommand = conn.CreateCommand();
-            sqliteCommand.CommandText = "SELECT * FROM SampleTable";
+            sqliteCommand.CommandText = consulta;
             sqliteReader = sqliteCommand.ExecuteReader();
-            while (sqliteReader.Read())
-            {
-                string readerString = sqliteReader.GetString(0);
-                int readerInt = sqliteReader.GetInt32(1);
-                Console.WriteLine(readerString);
-                Console.WriteLine(readerInt);
-            }
-            conn.Close();
+            tabla.Load(sqliteReader);
+            //Console.WriteLine(sqliteReader["COL2"].ToString());
+            
+            return tabla;
         }
     }
 }

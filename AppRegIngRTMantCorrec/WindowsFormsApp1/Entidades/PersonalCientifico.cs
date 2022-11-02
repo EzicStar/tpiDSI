@@ -14,8 +14,10 @@ namespace AplicacionPPAI.Models
         private string correoInsti;
         private string correoPersonal;
         private int telefono;
-        private Usuario usuario;
-        public PersonalCientifico(int legajo, string nombre, string apellido, int nroDocumento, string correoInsti, string correoPersonal, int telefono, Usuario usuario)
+        private string usuario;
+
+        public int GetLegajo() { return legajo; }
+        public PersonalCientifico(int legajo, string nombre, string apellido, int nroDocumento, string correoInsti, string correoPersonal, int telefono, string usuario)
         {
             this.legajo = legajo;
             this.nombre = nombre;
@@ -26,7 +28,7 @@ namespace AplicacionPPAI.Models
             this.telefono = telefono;
             this.usuario = usuario;
         }
-        public bool TengoUsuarioHabilitado() => usuario.EsHabilitado();
+        //public bool TengoUsuarioHabilitado() => usuario.EsHabilitado();
 
         public string[] MostrarCientifico()
         {
