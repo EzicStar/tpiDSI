@@ -71,3 +71,11 @@ D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Data.SQ
 D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\EntityFramework.xml
 D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.xml
 D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Data.SQLite.xml
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\EntityFramework.dll
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.dll
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Data.SQLite.dll
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Data.SQLite.EF6.dll
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Data.SQLite.Linq.dll
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\EntityFramework.xml
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.xml
+E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Data.SQLite.xml

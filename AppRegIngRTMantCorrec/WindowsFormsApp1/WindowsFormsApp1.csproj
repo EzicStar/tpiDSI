@@ -71,6 +71,9 @@
   <ItemGroup>
     <Compile Include="BBDD\BDConnection.cs" />
     <Compile Include="Controladores\ControladorIngresoMantCorrectivo.cs" />
+    <Compile Include="Controladores\InterfazWhatsApp.cs" />
+    <Compile Include="Controladores\IObservador.cs" />
+    <Compile Include="Controladores\ISujeto.cs" />
     <Compile Include="Controladores\InterfazCorreoElectronico.cs" />
     <Compile Include="Entidades\AsignacionCientificoDelCI.cs" />
     <Compile Include="Entidades\AsignacionResponsableTecnicoRT.cs" />

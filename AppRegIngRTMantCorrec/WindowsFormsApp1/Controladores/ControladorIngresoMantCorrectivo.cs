@@ -4,30 +4,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WindowsFormsApp1.Controladores;
 
 namespace AplicacionPPAI.Models
 {
-    public class ControladorIngresoMantCorrectivo
+    public class ControladorIngresoMantCorrectivo : ISujeto
     {
         PantIngMantCorrec interfaz;
         List<RecursoTecnologico> rtsASeleccionar;
         RecursoTecnologico rtSeleccionado;
         List<Turno> turnosResOPendRes;
         string razonMantenimiento;
+        DateTime fechaActual;
         DateTime fechaFinPrevista;
         string tipoNotif;
         Estado[] estados;
         Estado cancelado;
         Estado conIngEnMantCorrec;
         List<string> mailsCientificos = new List<string>();
+        List<int> telefonoCientificos = new List<int>();
+        bool notifMail;
+        bool notifWapp;
+        List<IObservador> observadores = new List<IObservador>();
 
         // registrar ingreso de rt en mantenimiento correctivo
         public void RegIngRTMantCorrec(PantIngMantCorrec interfaz)
         {
             // el objeto asignacion responsable tecnico del correspondiente usuario
-            var miAsigRespTec = ObtenerRespTecnico();
+            AsignacionResponsableTecnicoRT miAsigRespTec = ObtenerRespTecnico(); //TODO: aca estaba como tipo var en vez de asig, revisar q ande
             // lista de los recursos tecnologicos disponibles del resp tecnico
-            rtsASeleccionar =  miAsigRespTec.MisRTDisponibles();
+            rtsASeleccionar = MostrarRTDisponibles(miAsigRespTec);
             List<RecursoTecnologico> rtsOrdenados = OrdenarRTsPorTipo(rtsASeleccionar);
             List<string[]> infoRts = new List<string[]>();
             foreach (RecursoTecnologico rt in rtsOrdenados)
@@ -37,6 +43,11 @@ namespace AplicacionPPAI.Models
             this.interfaz = interfaz;
 
             interfaz.MostrarRTASeleccionar(infoRts);
+        }
+
+        private List<RecursoTecnologico> MostrarRTDisponibles(AsignacionResponsableTecnicoRT asig)
+        {
+            return asig.MisRTDisponibles();
         }
 
         public void RTSeleccionado(string numeroRT)
@@ -68,14 +79,25 @@ namespace AplicacionPPAI.Models
                 string[] infoTurno = turno.MostrarTurno();
                 infoTurnos.Add(infoTurno);
                 mailsCientificos.Add(infoTurno[6]);
+                telefonoCientificos.Add(int.Parse(infoTurno[8])); //TODO: revisar que el indice sea el de telefono
             }
 
             interfaz.MostrarTurnosResAfect(infoTurnos); // tmb solicita confirmacion y tipo de notificacion
         }
         
-        public void ConfirmacionIngresada(bool mail, bool wpp)
+        public void ConfirmacionIngresada(bool mail, bool wapp)
         {
-            //aca empieza la creacion del mantenimiento
+            //se guardan las opciones de notificacion
+            notifMail = mail;
+            notifWapp = wapp;
+
+            CrearMantenimiento();
+            GenerarNotifCientifico();
+        }
+
+        //Delega al rt la creacion del mantenimiento buscando previamente los estados para pasarselos por parametro
+        private void CrearMantenimiento()
+        {
             estados = FakeData.Listaestados;
             foreach (Estado estado in estados)
             {
@@ -88,12 +110,58 @@ namespace AplicacionPPAI.Models
                 {
                     conIngEnMantCorrec = estado;
                 }
+            }
 
-                rtSeleccionado.EnMantenimientoCorrectivo(cancelado, conIngEnMantCorrec, DateTime.Now, fechaFinPrevista, razonMantenimiento);
+            fechaActual = DateTime.Now; //guardamos la fecha actual
 
-                InterfazCorreoElectronico gestorCorreo = new InterfazCorreoElectronico();
-                string mensajeMail = "Su turno ha sido cancelado por mantenimiento correctivo, disculpe las molestias";
-                gestorCorreo.GenerarMailPorMantenimientoCorrectivo(mailsCientificos, mensajeMail);
+            rtSeleccionado.EnMantenimientoCorrectivo(cancelado, conIngEnMantCorrec, fechaActual, fechaFinPrevista, razonMantenimiento);
+        }
+
+        // LLama al generador de mail o whatsapp segun el tipo de notificacion seleccionada
+        private void GenerarNotifCientifico()
+        {
+            List<IObservador> interfaces = new List<IObservador>(); 
+
+            if(notifMail)
+            {
+                InterfazCorreoElectronico interfazCorreo = new InterfazCorreoElectronico();
+                interfaces.Add(interfazCorreo);
+            }
+            if(notifWapp)
+            {
+                InterfazWhatsApp interfazWapp = new InterfazWhatsApp();
+                interfaces.Add(interfazWapp);
+            }
+            
+            foreach ( IObservador interfaz in interfaces)
+            {
+                Suscribir(interfaz);
+            }
+
+            Notificar();
+            
+        }
+
+        public void Suscribir(IObservador observador)
+        {
+            observadores.Add(observador);
+        }
+
+        public void Quitar(IObservador observador)
+        {
+            observadores.Remove(observador);
+        }
+
+        public void Notificar()
+        {
+            //creamos el mensaje
+            string mensaje = "Lamentamos informarle que su turno para utilizar el recurso tecnológico de" +
+            $" tipo {rtSeleccionado.MostrarTipoRT()}, id número {rtSeleccionado.MostrarRT()[1]} ha sido cancelado por la siguiente razón: " +
+            razonMantenimiento + ". Disculpe las molestias.";
+
+            foreach(IObservador observador in observadores)
+            {
+                observador.Notificar(telefonoCientificos.ToArray(), mailsCientificos.ToArray(), "Cancelacion Turno", mensaje);
             }
         }
 
@@ -113,7 +181,7 @@ namespace AplicacionPPAI.Models
         }
 
         //funcion que 
-        public List<RecursoTecnologico> OrdenarRTsPorTipo(List<RecursoTecnologico> listaAOrdenar)
+        private List<RecursoTecnologico> OrdenarRTsPorTipo(List<RecursoTecnologico> listaAOrdenar)
         {
             for (int i = 0; i < (listaAOrdenar.Count - 1); i++)
             {
@@ -130,7 +198,7 @@ namespace AplicacionPPAI.Models
             }
             return listaAOrdenar;
         }
-        public List<Turno> OrdenarTurnosXCientifico(List<Turno> listaAOrdenar)
+        private List<Turno> OrdenarTurnosXCientifico(List<Turno> listaAOrdenar)
         {
             for (int i = 0; i < (listaAOrdenar.Count - 1); i++)
             {
