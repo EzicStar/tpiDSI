@@ -42,7 +42,7 @@ namespace AplicacionPPAI.Models
         // sigue vigente
         public bool EsUsuarioLogueadoYVigente(PersonalCientifico cientifAComparar)
         {
-            if (personalCientifico.Equals(cientifAComparar) && EsVigente() == true)
+            if (personalCientifico.GetUsuario() == cientifAComparar.GetUsuario() && EsVigente() == true)
             {
                 return true;
             }

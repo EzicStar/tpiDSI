@@ -14,6 +14,8 @@ namespace AplicacionPPAI.Models
         private DateTime fechaHoraFin;
         private List<CambioEstadoTurno> cambioEstadoTurno;
         private AsignacionCientificoDelCI asigCientifico;
+
+        public int GetId() { return idTurno; }
         public Turno(int idTurno, DateTime fechaGeneracion, int diaSemana, DateTime fechaHoraInicio, DateTime fechaHoraFin, List<CambioEstadoTurno> cambioEstadoTurno, AsignacionCientificoDelCI asigCientifico)
         {
             this.idTurno = idTurno;
@@ -48,8 +50,11 @@ namespace AplicacionPPAI.Models
         }
         public bool EsReservadoOPendienteDeReserva()
         {
+            
             foreach (CambioEstadoTurno cambioEstado in cambioEstadoTurno)
             {
+                Console.WriteLine("Turno nro: " + idTurno + " y es hasta: " +cambioEstado.GetFechaHasta());
+                Console.WriteLine("ES VIGENTE?????? " + cambioEstado.EsVigente());
                 if (cambioEstado.EsVigente() && cambioEstado.EsReservadoOPteReserva())
                 {
                     return true;

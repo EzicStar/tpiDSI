@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WindowsFormsApp1.BBDD;
 
 namespace AplicacionPPAI.Models
 {
@@ -100,6 +101,7 @@ namespace AplicacionPPAI.Models
 
         public List<Turno> MostrarTurnosReservadosPorMC(DateTime fechaFinPrevista)
         {
+            /*
             List<Turno> ReservadosOPendReserv = new List<Turno>();
             foreach (Turno turno in turnos)
             {
@@ -109,6 +111,21 @@ namespace AplicacionPPAI.Models
                 }
             }
             return ReservadosOPendReserv;
+            */
+
+            List<Turno> turnos = BDTurno.GetTurnosRT(nroRT);
+            Console.WriteLine("CANTIDAD DE TURNOS DEL RT: " + turnos.Count);
+            //List<Turno> turnos = FakeData.TurnosRT1;
+            List<Turno> turnosAfectados = new List<Turno>();
+            foreach (Turno turno in turnos)
+            {
+                if (turno.EsReservadoOPendienteDeReserva() && turno.EsEnPeriodo(fechaFinPrevista))
+                {
+                    turnosAfectados.Add(turno);
+                }
+            }
+            Console.WriteLine("CANTIDAD DE TURNOS AFECTADOS: " + turnosAfectados.Count);
+            return turnosAfectados;
         }
     }
 }

@@ -34,7 +34,7 @@ namespace AplicacionPPAI.Models
 
                 using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
                 {
-                    smtp.Credentials = new NetworkCredential("francoambrosini1470@gmail.com", "iiejvrwqqxvhfxja");
+                    smtp.Credentials = new NetworkCredential("francoambrosini1470@gmail.com", "hsenjuikbewqnmxz");
                     smtp.EnableSsl = true;
                     smtp.Send(msgMail);
                 }

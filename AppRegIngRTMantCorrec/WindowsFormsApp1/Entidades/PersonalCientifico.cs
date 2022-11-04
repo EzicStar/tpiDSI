@@ -17,6 +17,8 @@ namespace AplicacionPPAI.Models
         private string usuario;
 
         public int GetLegajo() { return legajo; }
+
+        public string GetUsuario() { return usuario; }
         public PersonalCientifico(int legajo, string nombre, string apellido, int nroDocumento, string correoInsti, string correoPersonal, int telefono, string usuario)
         {
             this.legajo = legajo;

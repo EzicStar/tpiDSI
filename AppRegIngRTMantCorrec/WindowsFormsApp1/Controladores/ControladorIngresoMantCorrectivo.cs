@@ -1,9 +1,12 @@
 ﻿using AplicacionPPAI.Models;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WindowsFormsApp1;
+using WindowsFormsApp1.BBDD;
 using WindowsFormsApp1.Controladores;
 
 namespace AplicacionPPAI.Models
@@ -18,7 +21,7 @@ namespace AplicacionPPAI.Models
         DateTime fechaActual;
         DateTime fechaFinPrevista;
         string tipoNotif;
-        Estado[] estados;
+        List<Estado> estados;
         Estado cancelado;
         Estado conIngEnMantCorrec;
         List<string> mailsCientificos = new List<string>();
@@ -33,7 +36,8 @@ namespace AplicacionPPAI.Models
             // el objeto asignacion responsable tecnico del correspondiente usuario
             AsignacionResponsableTecnicoRT miAsigRespTec = ObtenerRespTecnico(); //TODO: aca estaba como tipo var en vez de asig, revisar q ande
             // lista de los recursos tecnologicos disponibles del resp tecnico
-            rtsASeleccionar = MostrarRTDisponibles(miAsigRespTec);
+            rtsASeleccionar = BDRecursoTecnologico.GetRecursosTecnologicosResp(miAsigRespTec.GetLegajo(), miAsigRespTec.GetFechaHoraDesde());
+            //rtsASeleccionar = MostrarRTDisponibles(miAsigRespTec);
             List<RecursoTecnologico> rtsOrdenados = OrdenarRTsPorTipo(rtsASeleccionar);
             List<string[]> infoRts = new List<string[]>();
             foreach (RecursoTecnologico rt in rtsOrdenados)
@@ -98,7 +102,7 @@ namespace AplicacionPPAI.Models
         //Delega al rt la creacion del mantenimiento buscando previamente los estados para pasarselos por parametro
         private void CrearMantenimiento()
         {
-            estados = FakeData.Listaestados;
+            estados = BDEstado.GetEstados();
             foreach (Estado estado in estados)
             {
                 if (estado.EsAmbitoTurno() && estado.EsCancelado())
@@ -167,14 +171,16 @@ namespace AplicacionPPAI.Models
 
         public AsignacionResponsableTecnicoRT ObtenerRespTecnico()
         {
-            PersonalCientifico personalCientif = FakeData.SesionActual.GetPersonalCientif();
-
-            int lenAsig = FakeData.ListaAsignaciones.Count;
+            Sesion sesionActual = new Sesion(DateTime.ParseExact("20211102", "yyyyMMdd", CultureInfo.InvariantCulture), null, BDUsuario.GetUsuario("Gandalf"));
+            PersonalCientifico personalCientif = sesionActual.GetPersonalCientif();
+            List<AsignacionResponsableTecnicoRT> respoList = BDAsignacionResponsableTecnicoRT.GetAsignacionesResponsableTecnicoRT();
+            //List<AsignacionResponsableTecnicoRT> respoList = FakeData.ListaAsignaciones;
+            int lenAsig = respoList.Count;
             for (int i = 0; i < lenAsig; i++)
             {
-                if (FakeData.ListaAsignaciones[i].EsUsuarioLogueadoYVigente(personalCientif) == true)
+                if (respoList[i].EsUsuarioLogueadoYVigente(personalCientif) == true)
                 {
-                    return FakeData.ListaAsignaciones[i];
+                    return respoList[i];
                 }
             }
             return null;

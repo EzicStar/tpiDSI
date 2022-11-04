@@ -73,6 +73,7 @@ namespace WindowsFormsApp1.BBDD
             return rts;
         }
 
+
         private static RecursoTecnologico MapearRecursoTecnologico(DataRow fila)
         {
             int nroRT = Convert.ToInt32(fila["nroRT"].ToString());

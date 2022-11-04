@@ -19,13 +19,21 @@ namespace WindowsFormsApp1
 
         static void Main()
         {
+            SQLiteConnection conn = BDConnection.CreateConnection();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new PantIngMantCorrec());
-            SQLiteConnection conn = BDConnection.CreateConnection();
+            //int fec = null;
+            //DateTime fhh = DateTime.ParseExact(fec.ToString(), "yyyyMMdd", CultureInfo.InvariantCulture);
+            //Console.WriteLine(fhh);
+
+            //public static Sesion sesionActual = new Sesion(DateTime.ParseExact("20221102", "yyyyMMdd", CultureInfo.InvariantCulture), null, BDUsuario.GetUsuario("Gandalf"));
+           
+
         }
 
-        public static Sesion sesionActual = new Sesion(DateTime.ParseExact("20221102", "yyyyMMdd", CultureInfo.InvariantCulture), null, BDUsuario.GetUsuario("Gandalf"));
+
+
 
         //BDConnection.CreateTable(conn);
         //BDConnection.InsertData(conn);

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
 using System.Data;
+//using Microsoft.Data.Sqlite;
 
 namespace AplicacionPPAI.Models
 {
@@ -52,11 +53,12 @@ namespace AplicacionPPAI.Models
             SQLiteCommand sqliteCommand;
             DataTable tabla = new DataTable();
             sqliteCommand = conn.CreateCommand();
+            //sqliteCommand = new SQLiteCommand(consulta);
             sqliteCommand.CommandText = consulta;
             sqliteReader = sqliteCommand.ExecuteReader();
             tabla.Load(sqliteReader);
             //Console.WriteLine(sqliteReader["COL2"].ToString());
-            
+
             return tabla;
         }
     }

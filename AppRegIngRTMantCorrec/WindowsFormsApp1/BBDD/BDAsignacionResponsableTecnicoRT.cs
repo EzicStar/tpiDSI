@@ -30,9 +30,12 @@ namespace WindowsFormsApp1.BBDD
         {
             PersonalCientifico pers = BDPersonalCientifico.GetPersonalCientifico(Convert.ToInt32(fila["LegajoCientifico"].ToString()));
             DateTime fhd = DateTime.ParseExact(fila["fechaHoraDesde"].ToString(), "yyyyMMdd", CultureInfo.InvariantCulture);
-            DateTime fhh = DateTime.ParseExact(fila["fechaHoraHasta"].ToString(), "yyyyMMdd", CultureInfo.InvariantCulture);
-            List<RecursoTecnologico> recList = BDRecursoTecnologico.GetRecursosTecnologicosResp(pers.GetLegajo(), Convert.ToInt32(fhd));
-            AsignacionResponsableTecnicoRT mant = new AsignacionResponsableTecnicoRT(fhd, fhh, pers, recList);
+            //DateTime fhh;
+            //try { fhh = DateTime.ParseExact(fila["fechaHoraHasta"].ToString(), "yyyyMMdd", CultureInfo.InvariantCulture); }
+            //catch { fhh = new DateTime(9999, 12, 31); }
+            //DateTime fhh = DateTime.ParseExact(fila["fechaHoraHasta"].ToString(), "yyyyMMdd", CultureInfo.InvariantCulture);
+            List<RecursoTecnologico> recList = BDRecursoTecnologico.GetRecursosTecnologicosResp(pers.GetLegajo(), fhd);
+            AsignacionResponsableTecnicoRT mant = new AsignacionResponsableTecnicoRT(fhd, null, pers, recList);
 
             return mant;
         }

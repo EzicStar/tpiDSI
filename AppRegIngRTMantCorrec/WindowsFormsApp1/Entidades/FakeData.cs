@@ -138,18 +138,18 @@ namespace AplicacionPPAI.Models
         public static Turno Turno8 { get; set; } = new Turno(4, new DateTime(2022, 7, 15), 3, new DateTime(2022, 7, 15), new DateTime(2022, 7, 15), cambioEstadoTurno3, AsignacionC4);
 
         // LISTA DE TURNOS
-        static List<Turno> TurnosRT1 = new List<Turno> { Turno3, Turno5, Turno6 };
-        static List<Turno> TurnosRT2 = new List<Turno> { Turno1, Turno2, Turno3, Turno4, Turno5, Turno6, Turno7, Turno8 };
+        public static List<Turno> TurnosRT1 = new List<Turno> { Turno3, Turno5, Turno6 };
+        public static List<Turno> TurnosRT2 = new List<Turno> { Turno1, Turno2, Turno3, Turno4, Turno5, Turno6, Turno7, Turno8 };
 
 
         //RECURSOS TECNOLOGICOS
-        public static RecursoTecnologico Rec1 { get; set; } = new RecursoTecnologico(12, new DateTime(2019, 5, 11), "hola.jpg", 12, 1, "nose",
+        public static RecursoTecnologico Rec1 { get; set; } = new RecursoTecnologico(12, new DateTime(2019, 5, 11), "hola.jpg", 12, 1, 0,
         TipoRT1, Modelo1, mantenimientosRec1, cambioEstadoRTsRec1, TurnosRT1);
-        public static RecursoTecnologico Rec2 { get; set; } = new RecursoTecnologico(32, new DateTime(2019, 5, 11), "pep.jpg", 32, 4, "nose",
+        public static RecursoTecnologico Rec2 { get; set; } = new RecursoTecnologico(32, new DateTime(2019, 5, 11), "pep.jpg", 32, 4, 0,
             TipoRT2, Modelo3, mantenimientosRec2, cambioEstadoRTsRec2, TurnosRT2);
-        public static RecursoTecnologico Rec3 { get; set; } = new RecursoTecnologico(22, new DateTime(2019, 5, 11), "pep.jpg", 32, 4, "nose",
+        public static RecursoTecnologico Rec3 { get; set; } = new RecursoTecnologico(22, new DateTime(2019, 5, 11), "pep.jpg", 32, 4, 0,
             TipoRT3, Modelo2, mantenimientosRec2, cambioEstadoRTsRec2, TurnosRT2);
-        public static RecursoTecnologico Rec4 { get; set; } = new RecursoTecnologico(40, new DateTime(2019, 5, 11), "pep.jpg", 32, 4, "nose",
+        public static RecursoTecnologico Rec4 { get; set; } = new RecursoTecnologico(40, new DateTime(2019, 5, 11), "pep.jpg", 32, 4, 0,
             TipoRT3, Modelo1, mantenimientosRec2, cambioEstadoRTsRec2, TurnosRT2);
 
         // LISTA DE RECURSOS TECNOLOGICOS

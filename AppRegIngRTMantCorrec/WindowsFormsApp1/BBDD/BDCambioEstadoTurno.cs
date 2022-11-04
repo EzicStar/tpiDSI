@@ -87,10 +87,18 @@ namespace WindowsFormsApp1.BBDD
 
         private static CambioEstadoTurno MapearCambioEstadoTurno(DataRow fila)
         {
+            CambioEstadoTurno camtur;
             DateTime fhd = DateTime.ParseExact(fila["fechaHoraDesde"].ToString(), "yyyyMMdd", CultureInfo.InvariantCulture);
-            DateTime fhh = DateTime.ParseExact(fila["fechaHoraHasta"].ToString(), "yyyyMMdd", CultureInfo.InvariantCulture);
-            Estado est = BDEstado.GetEstado(fila["nombreEstado"].ToString(), "Turno");
-            CambioEstadoTurno camtur = new CambioEstadoTurno(fhd, fhh, est);
+            try { 
+                DateTime fhh = DateTime.ParseExact(fila["fechaHoraHasta"].ToString(), "yyyyMMdd", CultureInfo.InvariantCulture);
+                Estado est = BDEstado.GetEstado(fila["nombreEstado"].ToString(), "Turno");
+                camtur = new CambioEstadoTurno(fhd, fhh, est);
+            }
+            catch {
+                Estado est = BDEstado.GetEstado(fila["nombreEstado"].ToString(), "Turno");
+                camtur = new CambioEstadoTurno(fhd, new DateTime(0001, 01, 01), est);
+            }
+            
 
             return camtur;
         }

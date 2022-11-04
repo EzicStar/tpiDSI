@@ -10,6 +10,10 @@ namespace AplicacionPPAI.Models
         private DateTime fechaHoraDesde;
         private DateTime? fechaHoraHasta;
         private Estado estado;
+
+        public string GetEstado() { return estado.MostrarEstado(); }
+        public DateTime? GetFechaHasta() { return fechaHoraHasta; }
+
         public CambioEstadoTurno(DateTime fechaHoraDesde, DateTime? fechaHoraHasta, Estado estado)
         {
             this.fechaHoraDesde = fechaHoraDesde;
@@ -22,7 +26,7 @@ namespace AplicacionPPAI.Models
         }
         public bool EsVigente()
         {
-            if (fechaHoraHasta == null)
+            if (fechaHoraHasta > DateTime.Now)
             {
                 return true;
             }

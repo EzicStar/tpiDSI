@@ -1,85 +1,3 @@
-C:\Users\usuario.000\Documents\Apuntes Sistemas\Diseño de Sistemas\AppTPIRegIngRTMantCorrec\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
-C:\Users\usuario.000\Documents\Apuntes Sistemas\Diseño de Sistemas\AppTPIRegIngRTMantCorrec\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
-C:\Users\usuario.000\Documents\Apuntes Sistemas\Diseño de Sistemas\AppTPIRegIngRTMantCorrec\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
-C:\Users\usuario.000\Documents\Apuntes Sistemas\Diseño de Sistemas\AppTPIRegIngRTMantCorrec\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
-C:\Users\usuario.000\Documents\Apuntes Sistemas\Diseño de Sistemas\AppTPIRegIngRTMantCorrec\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
-C:\Users\usuario.000\Documents\Apuntes Sistemas\Diseño de Sistemas\AppTPIRegIngRTMantCorrec\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
-C:\Users\usuario.000\Documents\Apuntes Sistemas\Diseño de Sistemas\AppTPIRegIngRTMantCorrec\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
-C:\Users\usuario.000\Documents\Apuntes Sistemas\Diseño de Sistemas\AppTPIRegIngRTMantCorrec\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
-C:\Users\usuario.000\Documents\Apuntes Sistemas\Diseño de Sistemas\AppTPIRegIngRTMantCorrec\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
-C:\Users\usuario.000\Documents\Apuntes Sistemas\Diseño de Sistemas\AppTPIRegIngRTMantCorrec\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PantIngMantCorrec.resources
-C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacion\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
-C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacion\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
-C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacion\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PantIngMantCorrec.resources
-C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacion\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
-C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacion\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
-C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacion\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
-C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacion\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
-C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacion\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
-C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacion\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
-C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacion\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
-C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacion\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
-C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacion\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.ValueTuple.dll
-C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacion\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.ValueTuple.xml
-C:\Users\LENOVO\OneDrive - frc.utn.edu.ar\Facu\Tercer Año\DSI\TPI\Implementacion\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
-E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
-E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
-E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
-E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.ValueTuple.dll
-E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.ValueTuple.xml
-E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
-E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
-E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
-E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
-E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
-E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
-G:\Facultad\3° año\DSI Diseño de Sistemas\PPAI Grupo X\WinFormsCU\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
-G:\Facultad\3° año\DSI Diseño de Sistemas\PPAI Grupo X\WinFormsCU\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
-G:\Facultad\3° año\DSI Diseño de Sistemas\PPAI Grupo X\WinFormsCU\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
-G:\Facultad\3° año\DSI Diseño de Sistemas\PPAI Grupo X\WinFormsCU\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
-G:\Facultad\3° año\DSI Diseño de Sistemas\PPAI Grupo X\WinFormsCU\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
-G:\Facultad\3° año\DSI Diseño de Sistemas\PPAI Grupo X\WinFormsCU\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
-G:\Facultad\3° año\DSI Diseño de Sistemas\PPAI Grupo X\WinFormsCU\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
-G:\Facultad\3° año\DSI Diseño de Sistemas\PPAI Grupo X\WinFormsCU\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
-G:\Facultad\3° año\DSI Diseño de Sistemas\PPAI Grupo X\WinFormsCU\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
-G:\Facultad\3° año\DSI Diseño de Sistemas\PPAI Grupo X\WinFormsCU\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.ValueTuple.dll
-G:\Facultad\3° año\DSI Diseño de Sistemas\PPAI Grupo X\WinFormsCU\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.ValueTuple.xml
-G:\Facultad\3° año\DSI Diseño de Sistemas\PPAI Grupo X\WinFormsCU\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
-G:\Facultad\3° año\DSI Diseño de Sistemas\PPAI Grupo X\WinFormsCU\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\AplicacionPPAI.Models.PantIngMantCorrec.resources
-E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\AplicacionPPAI.Models.PantIngMantCorrec.resources
-E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
-E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
-D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
-D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
-D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
-D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.ValueTuple.dll
-D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.ValueTuple.xml
-D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
-D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
-D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\AplicacionPPAI.Models.PantIngMantCorrec.resources
-D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
-D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
-D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
-D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
-D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
-D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
-D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\EntityFramework.dll
-D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.dll
-D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Data.SQLite.dll
-D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Data.SQLite.EF6.dll
-D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Data.SQLite.Linq.dll
-D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\EntityFramework.xml
-D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.xml
-D:\Github\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Data.SQLite.xml
-<<<<<<< HEAD
-C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
-C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
-C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\AplicacionPPAI.Models.PantIngMantCorrec.resources
-C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
-C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
-C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
-C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
-C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\x86\sqlite3.dll
 C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\x64\sqlite3.dll
 C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
@@ -106,14 +24,12 @@ C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\
 C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.ValueTuple.xml
+C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\AplicacionPPAI.Models.PantIngMantCorrec.resources
+C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
-=======
-E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\EntityFramework.dll
-E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.dll
-E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Data.SQLite.dll
-E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Data.SQLite.EF6.dll
-E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Data.SQLite.Linq.dll
-E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\EntityFramework.xml
-E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.xml
-E:\GitHub\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\bin\Debug\System.Data.SQLite.xml
->>>>>>> c3927f0a1e01b8107a9aff1253814c73df3e1a27
+C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Franco\Desktop\tpiDSI\AppRegIngRTMantCorrec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

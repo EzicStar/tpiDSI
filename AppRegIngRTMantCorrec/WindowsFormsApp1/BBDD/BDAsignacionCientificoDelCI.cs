@@ -43,7 +43,7 @@ namespace WindowsFormsApp1.BBDD
         public static AsignacionCientificoDelCI GetAsignacionCientificoDelCI(int leg, DateTime fecha)
         {
             var fechint = fecha.Year * 10000 + fecha.Month * 100 + fecha.Day;
-            var asig = new AsignacionCientificoDelCI(new DateTime(0000, 00, 00), new DateTime(0000, 00, 00), null, null);
+            var asig = new AsignacionCientificoDelCI(new DateTime(0001, 01, 01), new DateTime(0001, 01, 01), null, null);
             string sentenciaSql = $"SELECT * FROM AsignacionesCientificoDelCI WHERE LegajoCientifico = {leg} AND fechaHoraDesde = {fechint}";
             var tablaResultado = BDConnection.ReadData(sentenciaSql);
 
@@ -59,9 +59,9 @@ namespace WindowsFormsApp1.BBDD
         {
             PersonalCientifico pers = BDPersonalCientifico.GetPersonalCientifico(Convert.ToInt32(fila["LegajoCientifico"].ToString()));
             DateTime fhd = DateTime.ParseExact(fila["fechaHoraDesde"].ToString(), "yyyyMMdd", CultureInfo.InvariantCulture);
-            DateTime fhh = DateTime.ParseExact(fila["fechaHoraHasta"].ToString(), "yyyyMMdd", CultureInfo.InvariantCulture);
-            List<Turno> listur = BDTurno.GetTurnos(pers.GetLegajo(), fhd);
-            AsignacionCientificoDelCI mant = new AsignacionCientificoDelCI(fhd, fhh, pers, listur);
+            //DateTime fhh = DateTime.ParseExact(fila["fechaHoraHasta"].ToString(), "yyyyMMdd", CultureInfo.InvariantCulture);
+            //List<Turno> listur = BDTurno.GetTurnos(pers.GetLegajo(), fhd);
+            AsignacionCientificoDelCI mant = new AsignacionCientificoDelCI(fhd, null, pers, null);
 
             return mant;
         }
