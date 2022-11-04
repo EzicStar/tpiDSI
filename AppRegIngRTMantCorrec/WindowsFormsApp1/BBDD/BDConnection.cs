@@ -47,6 +47,14 @@ namespace AplicacionPPAI.Models
             sQLiteCommand.ExecuteNonQuery();
         }
 
+        public static void UpdateData(string consulta)
+        {
+            SQLiteCommand sQLiteCommand;
+            sQLiteCommand = conn.CreateCommand();
+            sQLiteCommand.CommandText = consulta;
+            sQLiteCommand.ExecuteNonQuery();
+        }
+
         public static DataTable ReadData(string consulta)
         {
             SQLiteDataReader sqliteReader;

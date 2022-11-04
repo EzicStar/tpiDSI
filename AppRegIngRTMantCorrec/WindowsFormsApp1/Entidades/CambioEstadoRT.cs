@@ -11,6 +11,8 @@ namespace AplicacionPPAI.Models
         private DateTime? fechaHoraHasta;
         private Estado estado;
 
+        public DateTime GetFechaDesde() { return fechaHoraDesde; }
+
         public CambioEstadoRT(DateTime fechaHoraDesde, DateTime? fechaHoraHasta, Estado estado)
         {
             this.fechaHoraDesde = fechaHoraDesde;
@@ -25,7 +27,7 @@ namespace AplicacionPPAI.Models
 
         public bool EsVigente()
         {
-            if (fechaHoraHasta == null)
+            if (fechaHoraHasta > DateTime.Now)
             {
                 return true;
             }

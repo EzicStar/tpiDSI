@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WindowsFormsApp1.BBDD;
 
 namespace AplicacionPPAI.Models
 {
@@ -34,10 +35,12 @@ namespace AplicacionPPAI.Models
                 if (cambioEstado.EsVigente() && cambioEstado.EsReservadoOPteReserva())
                 {
                     cambioEstado.Finalizar(fechaActual);
+                    BDCambioEstadoTurno.FinalizarCambioEstadoTurno(cambioEstado, idTurno, fechaActual);
                 }
             }
             var cambioTurnoNew = new CambioEstadoTurno(fechaActual, null, estado);
             cambioEstadoTurno.Add(cambioTurnoNew);
+            BDCambioEstadoTurno.NuevoCambioEstadoTurnoCancelado(cambioTurnoNew, idTurno);
         }
         public bool EsEnPeriodo(DateTime fechaHasta) //acassaa
         {

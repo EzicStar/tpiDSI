@@ -85,6 +85,21 @@ namespace WindowsFormsApp1.BBDD
             return camtur;
         }
 
+        public static void NuevoCambioEstadoTurnoCancelado(CambioEstadoTurno cam, int idTurno)
+        {
+            int fechint = cam.GetFechaHoraDesde().Year * 10000 + cam.GetFechaHoraDesde().Month * 100 + cam.GetFechaHoraDesde().Day;
+            string sentenciaSql = $"INSERT INTO CambioEstadoTurno (idTurno, fechaHoraDesde, fechaHoraHasta, NombreEstado, AmbitoEstado) VALUES ({idTurno}, {fechint}, 20221231, \"Cancelado\", \"Turno\")";
+            BDConnection.InsertData(sentenciaSql);
+        }
+
+        public static void FinalizarCambioEstadoTurno(CambioEstadoTurno cam, int idTurno, DateTime fechaHasta)
+        {
+            int fechintHasta = fechaHasta.Year * 10000 + fechaHasta.Month * 100 + fechaHasta.Day;
+            int fechintDesde = cam.GetFechaHoraDesde().Year * 10000 + cam.GetFechaHoraDesde().Month * 100 + cam.GetFechaHoraDesde().Day;
+            string sentenciaSql = $"UPDATE CambioEstadoTurno SET FechaHoraHasta = {fechintHasta} WHERE idTurno = {idTurno} AND FechaHoraDesde = {fechintDesde}";
+            BDConnection.UpdateData(sentenciaSql);
+        }
+
         private static CambioEstadoTurno MapearCambioEstadoTurno(DataRow fila)
         {
             CambioEstadoTurno camtur;

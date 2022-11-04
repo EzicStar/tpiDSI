@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WindowsFormsApp1.BBDD;
 
 namespace AplicacionPPAI.Models
 {
@@ -13,6 +14,8 @@ namespace AplicacionPPAI.Models
 
         public string GetEstado() { return estado.MostrarEstado(); }
         public DateTime? GetFechaHasta() { return fechaHoraHasta; }
+
+        public DateTime GetFechaHoraDesde() { return fechaHoraDesde; }
 
         public CambioEstadoTurno(DateTime fechaHoraDesde, DateTime? fechaHoraHasta, Estado estado)
         {

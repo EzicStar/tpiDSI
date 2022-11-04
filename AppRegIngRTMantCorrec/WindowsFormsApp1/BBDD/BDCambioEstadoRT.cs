@@ -84,6 +84,24 @@ namespace WindowsFormsApp1.BBDD
             return cambest;
         }
 
+        public static void NuevoCambioEstadoRTCorrectivo(CambioEstadoRT cam, int nroRT)
+        {
+            int fechint = cam.GetFechaDesde().Year * 10000 + cam.GetFechaDesde().Month * 100 + cam.GetFechaDesde().Day;
+            string sentenciaSql = $"INSERT INTO CambioEstadoRT (nroRT, fechaHoraDesde, fechaHoraHasta, NombreEstado, AmbitoEstado) VALUES ({nroRT}, {fechint}, 20221231, \"Cancelado\", \"RT\")";
+            BDConnection.InsertData(sentenciaSql);
+        }
+
+        public static void FinalizarCambioEstadoRT(CambioEstadoRT cam, int nroRT, DateTime fechaHasta)
+        {
+            int fechintHasta = fechaHasta.Year * 10000 + fechaHasta.Month * 100 + fechaHasta.Day;
+            int fechintDesde = cam.GetFechaDesde().Year * 10000 + cam.GetFechaDesde().Month * 100 + cam.GetFechaDesde().Day;
+            string sentenciaSql = $"UPDATE CambioEstadoRT SET FechaHoraHasta = {fechintHasta} WHERE nroRT = {nroRT} AND FechaHoraDesde = {fechintDesde}";
+            BDConnection.UpdateData(sentenciaSql);
+            Console.WriteLine("FECHA HASTA A LA TABLA: " + fechintHasta);
+            Console.WriteLine("FECHA DESDE A LA TABLA: " + fechintDesde);
+
+        }
+
         private static CambioEstadoRT MapearCambioEstadoRT(DataRow fila)
         {
             DateTime fhd = DateTime.ParseExact(fila["fechaHoraDesde"].ToString(), "yyyyMMdd", CultureInfo.InvariantCulture);

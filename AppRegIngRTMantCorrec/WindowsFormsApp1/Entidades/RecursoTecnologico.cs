@@ -58,20 +58,26 @@ namespace AplicacionPPAI.Models
                     turno.CancelarPorMantenimientoCorrectivo(estadoCancelado, fechaInicio);
                 }
             }
-            // TODO aca desmaterializar el mantenimiento
             var mantenimientoNew = new Mantenimiento(fechaInicio, fechaHasta, motivo);
             mantenimientos.Add(mantenimientoNew);
+            BDMantenimiento.NuevoMantenimientoCorrectivo(mantenimientoNew, nroRT);
+
 
            foreach (CambioEstadoRT cambioEstado in cambioEstadoRT)
-            {
+           {
                 // TODO setea feche de inicio al cambio
                 if (cambioEstado.EsVigente())
                 {
                     cambioEstado.Finalizar(fechaInicio);
+                    Console.WriteLine("FECHA DESDE DEL OBJETO: " + cambioEstado.GetFechaDesde());
+                    Console.WriteLine("FECHA INICIO: " + fechaInicio);
+                    BDCambioEstadoRT.FinalizarCambioEstadoRT(cambioEstado, nroRT, fechaInicio);
                 }
-            }
+           }
 
-            cambioEstadoRT.Add(new CambioEstadoRT(fechaInicio, null, enMantCorrec));
+            var nuevoCambioRT = new CambioEstadoRT(fechaInicio, null, enMantCorrec);
+            cambioEstadoRT.Add(nuevoCambioRT);
+            BDCambioEstadoRT.NuevoCambioEstadoRTCorrectivo(nuevoCambioRT, nroRT);
         }
 
         public string MostrarTipoRT()
@@ -101,18 +107,6 @@ namespace AplicacionPPAI.Models
 
         public List<Turno> MostrarTurnosReservadosPorMC(DateTime fechaFinPrevista)
         {
-            /*
-            List<Turno> ReservadosOPendReserv = new List<Turno>();
-            foreach (Turno turno in turnos)
-            {
-                if (turno.EsEnPeriodo(fechaFinPrevista) && turno.EsReservadoOPendienteDeReserva())
-                {
-                    ReservadosOPendReserv.Add(turno);
-                }
-            }
-            return ReservadosOPendReserv;
-            */
-
             List<Turno> turnos = BDTurno.GetTurnosRT(nroRT);
             Console.WriteLine("CANTIDAD DE TURNOS DEL RT: " + turnos.Count);
             //List<Turno> turnos = FakeData.TurnosRT1;

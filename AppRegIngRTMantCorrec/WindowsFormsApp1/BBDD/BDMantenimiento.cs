@@ -55,6 +55,14 @@ namespace WindowsFormsApp1.BBDD
             return mants;
         }
 
+        public static void NuevoMantenimientoCorrectivo(Mantenimiento mant, int nroRT)
+        {
+            int fechintInicio = mant.GetFechaInicio().Year * 10000 + mant.GetFechaInicio().Month * 100 + mant.GetFechaInicio().Day;
+            int fechintFin = mant.GetFechaFin().Year * 10000 + mant.GetFechaFin().Month * 100 + mant.GetFechaFin().Day;
+            string sentenciaSql = $"INSERT INTO Mantenimientos (fechaInicioPrevista, fechaInicio, fechaFin, motivoMantenimiento, nroRT) VALUES ({fechintInicio}, {fechintInicio}, {fechintFin}, \"{mant.GetMotivo()}\", {nroRT})";
+            BDConnection.InsertData(sentenciaSql);
+        }
+
         private static Mantenimiento MapearMantenimiento(DataRow fila)
         {
             DateTime fini = DateTime.ParseExact(fila["fechaInicio"].ToString(), "yyyyMMdd", CultureInfo.InvariantCulture);
